@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABB7145D-275B-41B1-BE90-F16836A81600}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHI.Services.ARRWebPortal</RootNamespace>
+    <AssemblyName>DHI.Services.ARRWebPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SurroundSCMScci</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>MSSCCI:Surround SCM</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DHI.Math.Expression, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Math.Expression.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike.Install, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike.Install.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.BoundaryModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.BoundaryModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.ControlModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.ControlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.CrossSectionModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.CrossSectionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.DataAssimilationModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.DataAssimilationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Engine, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Generic, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.HDParameterDataAccess, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.HDParameterDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.M11Bridge, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.M11Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Mike1DDataAccess, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.Mike1DDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.MUBridge, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.MUBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.MzCouplings, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.MzCouplings.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.NetworkDataAccess, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.NetworkDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.Optimization, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.RainfallRunoffModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.RainfallRunoffModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.ResultDataAccess, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.ResultDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.SimLauncher, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.SimLauncher.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike1D.StructureModule, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Mike1D.17.0.0\lib\net47\DHI.Mike1D.StructureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.0\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.0\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrossSection.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="ArealTemporalPattern.cs" />
+    <Compile Include="Dfs2FileProcess.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="MeshProcess.cs" />
+    <Compile Include="NetworkProcess.cs" />
+    <Compile Include="PFS.cs" />
+    <Compile Include="Randomize.cs" />
+    <Compile Include="TemporalPattern.cs" />
+    <Compile Include="TemporalPatternDfs0.cs" />
+    <Compile Include="RetrieveDfs0.cs" />
+    <Compile Include="Dfs0Reader.cs" />
+    <Compile Include="Dfs0SqlCache.cs" />
+    <Compile Include="Dfs0Writer.cs" />
+    <Compile Include="IfdTableRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaftsParser.cs" />
+    <Compile Include="RorbParser.cs" />
+    <Compile Include="SetDfs0.cs" />
+    <Compile Include="SQL.cs" />
+    <Compile Include="LossesRequest.cs" />
+    <Compile Include="ProcessModelSetup.cs" />
+    <Compile Include="TemporalPatternRequest.cs" />
+    <Compile Include="UrbsParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if exist "C:\Work\SOLProjects\DHIAU\DHI.Services.ARRWebPortal\ARRWebPortal\Bin" copy "$(TargetPath)" "C:\Work\SOLProjects\DHIAU\DHI.Services.ARRWebPortal\ARRWebPortal\Bin"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

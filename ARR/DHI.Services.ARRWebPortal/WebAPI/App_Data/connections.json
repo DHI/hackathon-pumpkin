@@ -1,0 +1,33 @@
+{
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[DHI.Services.IConnection, DHI.Services]], mscorlib",
+  "Registration": {
+    "$type": "DHI.Services.Web.RegistrationServiceConnection, DHI.Services.Web",
+    "AccountRepositoryConnectionString": "[AppData]mail_templates.json",
+    "AccountRepositoryType": "DHI.Services.Accounts.AccountRepository, DHI.Services",
+    "MailTemplateRepositoryConnectionString": "[AppData]mail_templates.json",
+    "MailTemplateRepositoryType": "DHI.Services.Mails.MailTemplateRepository, DHI.Services",
+    "Name": "User account registration connection",
+    "Id": "Registration"
+  },
+  "MailTemplates": {
+    "$type": "DHI.Services.Web.MailTemplateServiceConnection, DHI.Services.Web",
+    "ConnectionString": "[AppData]mail_templates.json",
+    "RepositoryType": "DHI.Services.Mails.MailTemplateRepository, DHI.Services",
+    "Name": "Mail templates connection",
+    "Id": "MailTemplates"
+  },
+  "my-log": {
+    "$type": "DHI.Services.Web.LogServiceConnection, DHI.Services.Web",
+    "ConnectionString": "[AppData]log.json",
+    "LogReaderType": "DHI.Services.Logging.JsonLogger, DHI.Services",
+    "Name": "Log service connection",
+    "Id": "my-log"
+  },
+  "Hosts": {
+    "$type": "DHI.Services.Web.GroupedHostServiceConnection, DHI.Services.Web",
+    "ConnectionString": "[AppData]grouped_hosts.json",
+    "RepositoryType": "DHI.Services.Jobs.GroupedHostRepository, DHI.Services.Jobs",
+    "Name": "Grouped host service connection",
+    "Id": "Hosts"
+  }
+}

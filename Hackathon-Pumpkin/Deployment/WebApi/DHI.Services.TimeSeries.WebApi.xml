@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHI.Services.TimeSeries.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DHI.Services.TimeSeries.WebApi.DiscreteTimeSeriesServiceConnection">
+            <summary>
+                DiscreteTimeSeriesServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.DiscreteTimeSeriesServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.TimeSeries.WebApi.DiscreteTimeSeriesServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.DiscreteTimeSeriesServiceConnection.Create">
+            <summary>
+                Creates a DiscreteTimeSeriesService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.GroupedDiscreteTimeSeriesServiceConnection">
+            <summary>
+                GroupedDiscreteTimeSeriesServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.GroupedDiscreteTimeSeriesServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.TimeSeries.WebApi.GroupedDiscreteTimeSeriesServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.GroupedDiscreteTimeSeriesServiceConnection.Create">
+            <summary>
+                Creates a GroupedDiscreteTimeSeriesService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.GroupedUpdatableTimeSeriesServiceConnection">
+            <summary>
+                GroupedUpdatableTimeSeriesServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.GroupedUpdatableTimeSeriesServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.TimeSeries.WebApi.GroupedUpdatableTimeSeriesServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.GroupedUpdatableTimeSeriesServiceConnection.Create">
+            <summary>
+                Creates a GroupedUpdatableTimeSeriesService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesServiceConnection">
+            <summary>
+                TimeSeriesServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.TimeSeries.WebApi.TimeSeriesServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesServiceConnection.Create">
+            <summary>
+                Creates a TimeSeriesService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.UpdatableTimeSeriesServiceConnection">
+            <summary>
+                UpdatableTimeSeriesServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.UpdatableTimeSeriesServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.TimeSeries.WebApi.UpdatableTimeSeriesServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.UpdatableTimeSeriesServiceConnection.Create">
+            <summary>
+                Creates a UpdatableTimeSeriesService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.DataPointConverter`2">
+            <summary>
+                Class DataPointConverter.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TFlag">The type of the flag.</typeparam>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter" />
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.DataPointConverter`2.CanRead">
+            <summary>
+                Gets a value indicating whether this <see cref="T:Newtonsoft.Json.JsonConverter" /> can read JSON.
+            </summary>
+            <value><c>true</c> if this <see cref="T:Newtonsoft.Json.JsonConverter" /> can read JSON; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.DataPointConverter`2.CanConvert(System.Type)">
+            <summary>
+                Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns><c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.DataPointConverter`2.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+                Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.DataPointConverter`2.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+                Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.ComponentsDTO">
+            <summary>
+                Data transfer object for the IDs of two time series with the X- and Y-component of a variable
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.ComponentsDTO.X">
+            <summary>
+                Gets or sets the ID of the time series with the X-components.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.ComponentsDTO.Y">
+            <summary>
+                Gets or sets the ID of the time series with the Y-components.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.ComponentsDTO.ToValueTuple">
+            <summary>
+                Converts to a value tuple.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO">
+            <summary>
+                Data transfer object for a time series data resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO.DateTimes">
+            <summary>
+                Gets or sets the datetimes.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO.Values">
+            <summary>
+                Gets or sets the values.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO.Flags">
+            <summary>
+                Gets or sets the quality flags.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO.ToTimeSeriesData">
+            <summary>
+                Converts the DTO to a TimeSeriesData or TimeSeriesDataWFlag object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO">
+            <summary>
+                Data transfer object for a time series resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.DataType">
+            <summary>
+            Gets or sets the data type.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.Dimension">
+            <summary>
+            Gets or sets the dimension.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.FullName">
+            <summary>
+            Gets or sets the fullname.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.Data">
+            <summary>
+            Gets or sets the time series data.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.Unit">
+            <summary>
+            Gets or sets the unit.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesDTO.ToTimeSeries">
+            <summary>
+                Converts the DTO to a TimeSeries object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController">
+            <summary>
+                Time Series Analysis API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetMin(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the minimum value for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series ID or dateTimes not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetMinList(System.String,System.String[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of minimum values for the given list of time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetMax(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the maximum value for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series ID or dateTimes not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetMaxList(System.String,System.String[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of maximum values for the given list of time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetSum(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the sum value for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetSumList(System.String,System.String[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of sum values for the given list of time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetAverage(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the average value for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetAverageList(System.String,System.String[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of average values for the given list of time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetMovingAverage(System.String,System.String,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the moving average over the given window for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'window' query parameter is mandatory and is an integer defining the number of data points in the window.
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="window">The window (number of data points).</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetReduced(System.String,System.String,System.Double,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a reduced (simplified) time series using the Ramer–Douglas–Peucker algorithm of the given time series within
+                the given time interval.
+            </summary>
+            <remarks>
+                The 'tolerance' query parameter is optional. The tolerance is a relative tolerance expressed as a percentage of the
+                difference between maximum and minimum value within the analysed time interval. If no tolerance is given, the
+                default value is 2%.
+                The 'minimumcount' query parameter is optional. The minimumcount defines at threshold value for ignoring the
+                request to reduce the times series. If, for example, the minimum count is set to 1000, and the number of data
+                points within the given time interval is less than 1000, the reduction request will be ignored, and the complete
+                time series will be returned. If no minimum count is given, the default value is 3000 data points.
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="tolerance">The tolerance.</param>
+            <param name="minimumCount">The minimum count.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetReducedList(System.String,System.String[],System.Double,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of reduced (simplified) time series using the Ramer–Douglas–Peucker algorithm of the given list of time
+                series within the given time interval.
+            </summary>
+            <remarks>
+                The 'tolerance' query parameter is optional. The tolerance is a relative tolerance expressed as a percentage of the
+                difference between maximum and minimum value within the analysed time interval. If no tolerance is given, the
+                default value is 2%.
+                The 'minimumcount' query parameter is optional. The minimumcount defines at threshold value for ignoring the
+                request to reduce the times series. If, for example, the minimum count is set to 1000, and the number of data
+                points within the given time interval is less than 1000, the reduction request will be ignored, and the complete
+                time series will be returned. If no minimum count is given, the default value is 3000 data points.
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="tolerance">The tolerance.</param>
+            <param name="minimumCount">The minimum count.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetPercentile(System.String,System.String,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets the value (percentile) below below which a given percentage of values within the given time interval fall.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="percentage">The percentage.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series ID or dateTimes not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetPercentileList(System.String,System.String[],System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of percentile values for the given list of time series within the given time interval.
+            </summary>
+            <remarks>
+                The 'from' and 'to' query parameters can be omitted. If no time interval is given, the analysis is performed on the
+                entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series IDs.</param>
+            <param name="percentage">The percentage.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesAnalysisController.GetResampled(System.String,System.String,System.TimeSpan,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a resampled time series within the given time interval with time steps equivalent to the given time span.
+            </summary>
+            <remarks>
+                The time series values are found using interpolation according to the time series data type.
+                The timespan query parameter is mandatory. The from and to query parameters are optional. If no time interval is
+                given, the analysis is performed on the entire range of time series values.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The time series ID</param>
+            <param name="timeSpan">The time span.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+            <response code="404">Time series ID not found.</response>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesController">
+            <summary>
+                Time Series API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.Add(System.String,DHI.Services.TimeSeries.WebApi.TimeSeriesDTO)">
+            <summary>
+                Adds a new time series.
+            </summary>
+            <remarks>
+                The only required information in the request body is the FullName. However, some connection types might require
+                additional information such as DataType, Quantity and Unit.
+                If the connection type is not a grouped (hierarchical) connection type, the FullName should be a simple flat time
+                series ID.
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="timeSeriesDTO">The time series dto.</param>
+            <response code="201">Created</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.Update(System.String,DHI.Services.TimeSeries.WebApi.TimeSeriesDTO)">
+            <summary>
+                Updates an existing time series.
+            </summary>
+            <remarks>
+                The only required information in the request body is the FullName.
+                If the connection type is not a grouped (hierarchical) connection type, the FullName should be a simple flat time
+                series ID.
+                The updated data and/or meta data will depend on the other information given in the request body.
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="timeSeriesDTO">The time series dto.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.SetValues(System.String,System.String,DHI.Services.TimeSeries.WebApi.TimeSeriesDataDTO)">
+            <summary>
+                Sets some time series values for the time series with the given ID.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="timeSeriesDataDTO">The time series data dto.</param>
+            <response code="200">OK</response>
+            <response code="404">Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.Delete(System.String,System.String)">
+            <summary>
+                Deletes a time series with the given ID.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.DeleteValues(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Deletes the time series values for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.Get(System.String,System.String)">
+            <summary>
+                Gets the time series with the specified identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetCount(System.String)">
+            <summary>
+                Gets the total number of time series.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetDateTimes(System.String,System.String)">
+            <summary>
+                Gets a list of all datetimes for the time series with the given identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetFirstDateTime(System.String,System.String)">
+            <summary>
+                Gets the first date time for the time series with the given identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetFirstValue(System.String,System.String)">
+            <summary>
+                Gets the first value (corresponding to the first time step) for the given time series.
+            </summary>
+            <remarks>
+                If the time series does not contain any data, null is returned.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetFirstValueList(System.String,System.String[])">
+            <summary>
+                Gets the first value (corresponding to the first time step) for the given list of time series
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series ids.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetFirstValueAfter(System.String,System.String,System.DateTime)">
+            <summary>
+                Returns the first value after the given datetime for the given time series.
+            </summary>
+            <remarks>
+                A datetime value is given as a modified ISO 8601 format (with the ":" separators in the time specification
+                omitted).
+                If the time series does not contain any data, null is returned.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="date">The datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetFullNames(System.String,System.String)">
+            <summary>
+                Gets a list of time series full-name identifiers.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is grouped (hierarchical).
+                If a group is given, a list of time series full-name identifiers within the given group (recursive) is retrieved.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetIds(System.String)">
+            <summary>
+                Gets a list of all time series IDs.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetLastDateTime(System.String,System.String)">
+            <summary>
+                Gets the last datetime for the given time series.
+            </summary>
+            <remarks>
+                If the time series does not contain any data, null is returned.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetLastValue(System.String,System.String)">
+            <summary>
+                Gets the last value (corresponding to the last time step) for the given time series.
+            </summary>
+            <remarks>
+                If the time series does not contain any data, null is returned.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetLastValueList(System.String,System.String[])">
+            <summary>
+                Gets the last value (corresponding to the last time step) for the given list of time series
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The time series ids.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetLastValueBefore(System.String,System.String,System.DateTime)">
+            <summary>
+                Gets the last value before the given datetime for the given time series.
+            </summary>
+            <remarks>
+                If the time series does not contain any data, null is returned.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="date">The datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series not found</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetList(System.String,System.String)">
+            <summary>
+                Gets a list of time series.
+            </summary>
+            <remarks>
+                If no group is given, a list of all time series is retrieved.
+                If a group is given, a list of time series within the given group (recursive) is retrieved.
+                This is only applicable if the connection type is grouped (hierarchical).
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetListByGroups(System.String,System.String[])">
+            <summary>
+                Gets a list of time series within the given list of groups (recursive).
+            </summary>
+            <remarks>
+                NOTE: This is only applicable if the connection type is grouped (hierarchical).
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="groups">The list of groups.</param>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetValue(System.String,System.String,System.DateTime)">
+            <summary>
+                Gets the value at the given datetime for the given time series.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="date">The datetime.</param>
+            <response code="200">OK</response>
+            <response code="204">No content. Time series ID or dateTime not found.</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetValues(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of all values for the given time series within the given time interval.
+            </summary>
+            <remarks>
+                All combinations of the optional from and to parameters are possible.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetValuesList(System.String,System.String[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of values within the given time interval for the given list of time series.
+            </summary>
+            <remarks>
+                All combinations of the optional from and to parameters are possible.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The ids.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetVectors(System.String,DHI.Services.TimeSeries.WebApi.ComponentsDTO,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of vectors within the given time interval for the given X- and Y-component time series.
+            </summary>
+            <remarks>
+                All combinations of the optional from and to parameters are possible.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="componentsDTO">The component time series ids.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesController.GetVectorsList(System.String,DHI.Services.TimeSeries.WebApi.ComponentsDTO[],System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets a list of vectors within the given time interval for the given list of X- and Y-component time series.
+            </summary>
+            <remarks>
+                All combinations of the optional from and to parameters are possible.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="componentsDTOList">The list of component time series ids.</param>
+            <param name="from">From datetime.</param>
+            <param name="to">To datetime.</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="T:DHI.Services.TimeSeries.WebApi.TimeSeriesDataConverter`2">
+            <summary>
+                Class TimeSeriesDataConverter.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <typeparam name="TFlag">The type of the flag.</typeparam>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter" />
+        </member>
+        <member name="P:DHI.Services.TimeSeries.WebApi.TimeSeriesDataConverter`2.CanRead">
+            <summary>
+                Gets a value indicating whether this <see cref="T:Newtonsoft.Json.JsonConverter" /> can read JSON.
+            </summary>
+            <value><c>true</c> if this <see cref="T:Newtonsoft.Json.JsonConverter" /> can read JSON; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesDataConverter`2.CanConvert(System.Type)">
+            <summary>
+                Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns><c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesDataConverter`2.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+                Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:DHI.Services.TimeSeries.WebApi.TimeSeriesDataConverter`2.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+                Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+    </members>
+</doc>

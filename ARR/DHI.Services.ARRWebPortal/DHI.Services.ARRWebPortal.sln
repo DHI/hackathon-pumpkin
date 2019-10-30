@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHI.Services.ARRWebPortal.WebApi", "DHI.Services.ARRWebPortal.WebApi\DHI.Services.ARRWebPortal.WebApi.csproj", "{92100B97-0418-4987-B1DC-E9542E8F0EC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHI.Services.ARRWebPortal", "DHI.Services.ARRWebPortal\DHI.Services.ARRWebPortal.csproj", "{ABB7145D-275B-41B1-BE90-F16836A81600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHI.Services.HazardTool", "DHI.Services.HazardTool\DHI.Services.HazardTool.csproj", "{3FCE0A27-2E42-41F6-80C2-68B82E86E843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHI.Workflow.Activities.ARRWebPortal", "DHI.Services.ARRWebPortal.Activities\DHI.Workflow.Activities.ARRWebPortal.csproj", "{9728E105-3E05-416A-9C08-D08CA8BE6C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHI.ARRWebPortal.WebApi.Deploy", "DHI.ARRWebPortal.WebApi.Deploy\DHI.ARRWebPortal.WebApi.Deploy.csproj", "{79144552-8986-434D-B03F-BBC54544AD62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{CD15D8C0-A6BD-4A02-A273-D3665723A829}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Debug|x64.Build.0 = Debug|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Release|x64.ActiveCfg = Release|Any CPU
+		{92100B97-0418-4987-B1DC-E9542E8F0EC9}.Release|x64.Build.0 = Release|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Debug|x64.Build.0 = Debug|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Release|x64.ActiveCfg = Release|Any CPU
+		{ABB7145D-275B-41B1-BE90-F16836A81600}.Release|x64.Build.0 = Release|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Debug|x64.Build.0 = Debug|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Release|x64.ActiveCfg = Release|Any CPU
+		{3FCE0A27-2E42-41F6-80C2-68B82E86E843}.Release|x64.Build.0 = Release|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Debug|x64.Build.0 = Debug|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Release|x64.ActiveCfg = Release|Any CPU
+		{9728E105-3E05-416A-9C08-D08CA8BE6C5B}.Release|x64.Build.0 = Release|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Debug|x64.Build.0 = Debug|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79144552-8986-434D-B03F-BBC54544AD62}.Release|x64.ActiveCfg = Release|x64
+		{79144552-8986-434D-B03F-BBC54544AD62}.Release|x64.Build.0 = Release|x64
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Debug|x64.Build.0 = Debug|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Release|x64.ActiveCfg = Release|Any CPU
+		{CD15D8C0-A6BD-4A02-A273-D3665723A829}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BE8FAB2-7795-4A7E-857A-2DB11F21A647}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccProjectName0 = SurroundSCMScci
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Surround\u0020SCM
+		SccProjectUniqueName1 = DHI.Services.ARRWebPortal.WebApi\\DHI.Services.ARRWebPortal.WebApi.csproj
+		SccLocalPath1 = DHI.Services.ARRWebPortal.WebApi
+		SccProjectUniqueName2 = DHI.Services.ARRWebPortal\\DHI.Services.ARRWebPortal.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = DHI.Services.ARRWebPortal\\
+		SccProjectUniqueName3 = DHI.Services.HazardTool\\DHI.Services.HazardTool.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = DHI.Services.HazardTool\\
+		SccProjectUniqueName4 = DHI.Services.ARRWebPortal.Activities\\DHI.Workflow.Activities.ARRWebPortal.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = DHI.Services.ARRWebPortal.Activities\\
+	EndGlobalSection
+EndGlobal

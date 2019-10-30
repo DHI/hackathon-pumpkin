@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHI.Services.GIS.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DHI.Services.GIS.WebApi.AttributeDTO">
+            <summary>
+                Data transfer object for an attribute resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.AttributeDTO.name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.AttributeDTO.dataType">
+            <summary>
+                Gets or sets the type of the data.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.AttributeDTO.length">
+            <summary>
+                Gets or sets the length.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.AttributeDTO.displayName">
+            <summary>
+                Gets or sets the display name.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.AttributeDTO.ToAttribute">
+            <summary>
+                Converts the DTO to an Attribute object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.CachedMapServiceConnection">
+            <summary>
+                CachedMapServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.GIS.Maps.CachedMapServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.CachedMapServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.CachedMapServiceConnection"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.CachedMapServiceConnection.Create">
+            <summary>
+            Creates this instance.
+            </summary>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.FileCachedMapServiceConnection">
+            <summary>
+                FileCachedMapServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.GIS.Maps.FileCachedMapServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.FileCachedMapServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.FileCachedMapServiceConnection"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.FileCachedMapServiceConnection.Create">
+            <summary>
+            Creates this instance.
+            </summary>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.GisServiceConnection">
+            <summary>
+                GisServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GisServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.GisServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GisServiceConnection.Create">
+            <summary>
+                Creates a GisService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.GroupedGisServiceConnection">
+            <summary>
+                GroupedGisServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GroupedGisServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.GroupedGisServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GroupedGisServiceConnection.Create">
+            <summary>
+                Creates a GroupedGisService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.GroupedUpdatableGisServiceConnection">
+            <summary>
+                GroupedUpdatableGisServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GroupedUpdatableGisServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.GroupedUpdatableGisServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GroupedUpdatableGisServiceConnection.Create">
+            <summary>
+                Creates a GroupedUpatableGisService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapServiceConnection">
+            <summary>
+                GisServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.GIS.Maps.MapServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.MapServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapServiceConnection.Create">
+            <summary>
+                Creates a MapService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapStyleServiceConnection">
+            <summary>
+                MapStyleServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.GIS.Maps.MapStyleServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStyleServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.MapStyleServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStyleServiceConnection.Create">
+            <summary>
+                Creates a MapStyleService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.UpdatableGisServiceConnection">
+            <summary>
+                UpdatableGisServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.UpdatableGisServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.UpdatableGisServiceConnection"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.UpdatableGisServiceConnection.Create">
+            <summary>
+                Creates a UpdatableGisService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.FeatureDTO">
+            <summary>
+                Data transfer object for a feature resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.FeatureDTO.geometry">
+            <summary>
+            Gets or sets the geometry.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.FeatureDTO.properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.FeatureDTO.ToFeature">
+            <summary>
+                Converts the DTO to a Feature object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.GISController">
+            <summary>
+                Feature Collections API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.Get(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+                Gets the feature collection with the specified identifier.
+            </summary>
+            <remarks>
+                If the provider supports associations of time series, spreadsheets etc., these associations will be included in the
+                response if the associations parameter is set to true.
+                The result can be filtered using query string parameters.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="associations">if set to <c>true</c> associations are returned.</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <response code="200">OK</response>
+            <response code="404">feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetListByIds(System.String,System.String[],System.Boolean,System.String)">
+            <summary>
+                Gets a list of feature collections with the specified IDs
+            </summary>
+            <remarks>
+                If the provider supports associations of time series, spreadsheets etc., these associations will be included in the
+                response if the associations parameter is set to true.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The feature collection IDs.</param>
+            <param name="associations">if set to <c>true</c> associations are returned.</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <response code="200">OK</response>
+            <response code="404">feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetCount(System.String)">
+            <summary>
+                Gets the total number of feature collections.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetFullNames(System.String,System.String)">
+            <summary>
+                Gets all fullname identifiers.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is grouped (hierarchical).
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetIds(System.String)">
+            <summary>
+                Gets a list of all feature collection IDs.
+            </summary>
+            <remarks>
+                The result can be filtered using query string parameters.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetGeometry(System.String,System.String)">
+            <summary>
+                Gets a geometry collection from the feature collection with the given ID.
+            </summary>
+            <remarks>
+                Only the feature geometry is returned – no properties (attributes) are included.
+                The result can be filtered using query string parameters.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetList(System.String,System.String)">
+            <summary>
+                Gets a list of all feature collections within the given group.
+                If no group is given, all feature collections are returned.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.QueryFeatureCollection(System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Services.GIS.FeatureCollection{System.String}})">
+            <summary>
+                Gets a list of all feature collection IDs fullfilling the given query
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="queryDTO">The query dto.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.CreateFeatureCollection(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Creates a new feature collection.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="jobject">The feature collection body.</param>
+            <response code="201">Created</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateFeatureCollection(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Updates an existing feature collection.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="jobject">The feature collection body.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.RemoveFeatureCollection(System.String,System.String)">
+            <summary>
+                Removes the feature collection with the given ID.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetFeatureCollectionEnvelope(System.String,System.String,System.String)">
+            <summary>
+                Gets the feature collection envelope.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetFeatureCollectionFootprint(System.String,System.String,System.String,System.Nullable{System.Double})">
+            <summary>
+                Gets the feature collection footprint.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <param name="simplifyDistance">The simplify distance.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetFeatureIds(System.String,System.String)">
+            <summary>
+                Gets the feature IDs for the feature collection with the given ID.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.QueryFeatures(System.String,System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Spatial.IFeature},System.Boolean,System.String)">
+            <summary>
+                Queries the features.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="queryDTO">The query dto.</param>
+            <param name="associations">if set to <c>true</c> [associations].</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.CreateFeature(System.String,System.String,DHI.Services.GIS.WebApi.FeatureDTO)">
+            <summary>
+                Creates a new feature in the feature collection with the give identifier.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="featureDTO">The feature dto.</param>
+            <response code="201">Created</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetFeature(System.String,System.String,System.String,System.String)">
+            <summary>
+                Gets the feature with the given ID within the feature collection with the given ID.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="featureId">The feature identifier.</param>
+            <param name="outSpatialReference">The output spatial reference.</param>
+            <response code="200">OK</response>
+            <response code="404">Feature collection not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateFeature(System.String,System.String,DHI.Services.GIS.WebApi.FeatureDTO)">
+            <summary>
+                Updates a feature.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="featureDTO">The feature dto.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.RemoveFeature(System.String,System.String,System.String)">
+            <summary>
+                Removes the feature with the given ID.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="featureId">The feature identifier.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Feature not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.RemoveFeatures(System.String,System.String,Newtonsoft.Json.Linq.JArray)">
+            <summary>
+                Removes the features with the given IDs.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="featureIds">The feature ids.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.CreateAttribute(System.String,System.String,DHI.Services.GIS.WebApi.AttributeDTO)">
+            <summary>
+                Creates a new attribute in the feature collection with the given ID.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="featureCollectionId">The feature collection identifier.</param>
+            <param name="attributeDTO">The attribute dto.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.GetAllAttributes(System.String,System.String)">
+            <summary>
+                List all attributes of a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttribute(System.String,System.String,DHI.Services.GIS.WebApi.AttributeDTO)">
+            <summary>
+                Update attribute field of a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeDTO">Attribute data transfer object</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.RemoveAttribute(System.String,System.String,System.Int32)">
+            <summary>
+                Remove attribute field from a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeIndex">Zero-based index of attribute field to remove.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueForFeature(System.String,System.String,System.String,System.Int32,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value for a feature in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="featureId">Id of the feature to update.</param>
+            <param name="attributeIndex">Zero-based index of attribute field to update.</param>
+            <param name="value">Value object like {"value": 1}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueForFeatures(System.String,System.String,System.Int32,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value for features that match a list of feature ids in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeIndex">Zero-based index of attribute field to update.</param>
+            <param name="parameters">Object like {"value": 1, "featureIds": [featureId, featureId, ...]}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueForFeaturesWhere(System.String,System.String,System.Int32,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value for features in a feature collection that match a specified filter.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeIndex">Zero-based index of attribute field to update.</param>
+            <param name="parameters">Object like {"value": 1, "filter": [{"Item": "country", "Operator": "Equal", "DK"}, ...]}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueByNameForFeature(System.String,System.String,System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value by name for a feature in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="featureId">Id of the feature to update.</param>
+            <param name="attributeName">Name of the attribute field to update.</param>
+            <param name="value">Value object like {"value": 1}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueByNameForFeatures(System.String,System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value  by name for features that match a list of feature ids in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeName">Name of the attribute field to update.</param>
+            <param name="parameters">Object like {"value": 1, "featureIds": [featureId, featureId, ...]}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValueByNameForFeaturesWhere(System.String,System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute value  by name for features in a feature collection that match a specified filter.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeName">Name of the attribute field to update.</param>
+            <param name="parameters">Object like {"value": 1, "filter": [{"Item": "country", "Operator": "Equal", "DK"}, ...]}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesForFeature(System.String,System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for a feature in a feature collection.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="featureId">Feature identifier</param>
+            <param name="parameters">Object like {"attributes": {1: "red", 2: 1}}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesByNameForFeature(System.String,System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for a feature in a feature collection.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="featureId">Feature identifier</param>
+            <param name="parameters">Object like {"attributes": {"attr1": "red", "attr2": 1}}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesByNameForFeatures(System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for features that match a list of feature ids in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="parameters">
+                Object like {"attributes": {"attr1": "red", "attr2": 1 }, "featureIds": [featureId, featureId,
+                ...]}.
+            </param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesForFeatures(System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for features that match a list of feature ids in a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="parameters">Object like {"attributes": {1: "red", 2: 1 }, "featureIds": [featureId, featureId, ...]}.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesByNameForFeaturesWhere(System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for features in a feature collection that match a specified filter.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="parameters">
+                Object like {"attributes": {"attr1": "red", "attr2": 1}, "filter": [{"Item": "country",
+                "Operator": "Equal", "DK"}, ...]}.
+            </param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.UpdateAttributeValuesForFeaturesWhere(System.String,System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+                Update attribute values for features in a feature collection that match a specified filter.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="parameters">
+                Object like {"attributes": {1: "red", 2: 1}, "filter": [{"Item": "country", "Operator":
+                "Equal", "DK"}, ...]}.
+            </param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.GISController.RemoveAttributeByName(System.String,System.String,System.String)">
+            <summary>
+                Remove attribute field  by name from a feature collection
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is updatable.
+            </remarks>
+            <param name="connectionId">Connection identifier</param>
+            <param name="featureCollectionId">Feature collection identifier</param>
+            <param name="attributeName">Name of the attribute field to remove.</param>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapsController">
+            <summary>
+                Maps API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapsController.WmsRequest(System.String)">
+            <summary>
+                Returns a bitmap image (png) using the WMS standard protocol.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapsController.GetDateTimes(System.String,System.String)">
+            <summary>
+                Gets the date times.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The map source identifier.</param>
+            <returns>ActionResult&lt;SortedSet&lt;DateTime&gt;&gt;.</returns>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapsController.GetMaps(System.String,System.Collections.Generic.Dictionary{System.DateTime,System.String})">
+            <summary>
+                Returns a list of base64 encoded bitmap images.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="timeSteps">The dictionary of date times and corresponding file paths</param>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapStyleDTO">
+            <summary>
+                Data transfer object for map style resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.MapStyleDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.MapStyleDTO.Name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.GIS.WebApi.MapStyleDTO.StyleCode">
+            <summary>
+                Gets or sets the style code.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStyleDTO.ToMapStyle">
+            <summary>
+                Converts the DTO to a MapStyle object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapStyleRepository">
+            <summary>
+                JSON file-based MapStyleRepository that is located in the App_Data folder.
+            </summary>
+            <seealso cref="T:DHI.Services.GIS.Maps.MapStyleRepository" />
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStyleRepository.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.GIS.WebApi.MapStyleRepository" /> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="T:DHI.Services.GIS.WebApi.MapStylesController">
+            <summary>
+                Map Styles API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.Delete(System.String)">
+            <summary>
+                Deletes the map style with the specified identifier.
+            </summary>
+            <param name="id">The map style identifier.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Map style not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.Get(System.String)">
+            <summary>
+                Gets the map style with the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Map style not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.GetPalette(System.String)">
+            <summary>
+                Gets the palette for the map style with the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Map style not found</response>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.GetAll">
+            <summary>
+                Gets a list of all map styles.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.GetCount">
+            <summary>
+                Gets the total number of map styles.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.GIS.WebApi.MapStylesController.Add(DHI.Services.GIS.WebApi.MapStyleDTO)">
+            <summary>
+                Adds a new map style.
+            </summary>
+            <param name="mapStyleDto">The map style dto.</param>
+            <response code="201">Created</response>
+        </member>
+    </members>
+</doc>

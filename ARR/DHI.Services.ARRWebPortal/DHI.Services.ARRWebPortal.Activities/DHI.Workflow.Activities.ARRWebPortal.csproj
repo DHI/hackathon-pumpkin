@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9728E105-3E05-416A-9C08-D08CA8BE6C5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHI.Workflow.Activities.ARRWebPortal</RootNamespace>
+    <AssemblyName>DHI.Workflow.Activities.ARRWebPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SurroundSCMScci</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>MSSCCI:Surround SCM</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DHI.Chart.Map, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=AMD64">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.Chart.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.DHIfl, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.DHIfl.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Generic.MikeZero.DFS, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.Generic.MikeZero.DFS.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Generic.MikeZero.EUM, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.Generic.MikeZero.EUM.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.PFS, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.PFS.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Projections, Version=17.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIKECore.17.2.1\lib\net471\DHI.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services, Version=11.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.11.1.4\lib\net472\DHI.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.GIS, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.GIS.5.1.0\lib\net47\DHI.Services.GIS.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.Jobs, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.Jobs.4.0.0\lib\net47\DHI.Services.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.Provider.OpenXML, Version=6.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.OpenXML.6.2.0\lib\net472\DHI.Services.Provider.OpenXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.Rasters, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.Rasters.3.4.1\lib\net47\DHI.Services.Rasters.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.Spreadsheets, Version=4.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.Spreadsheets.4.5.2\lib\net47\DHI.Services.Spreadsheets.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Services.TimeSeries, Version=3.12.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Services.TimeSeries.3.12.16\lib\net47\DHI.Services.TimeSeries.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Spatial, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Spatial.2.2.0\lib\net472\DHI.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Workflow.Activities.ArgumentConverter, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Workflow.Activities.6.1.2\lib\net47\DHI.Workflow.Activities.ArgumentConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Workflow.Activities.Core, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHI.Workflow.Activities.6.1.2\lib\net47\DHI.Workflow.Activities.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FileCache, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileCache.2.2.0\lib\net45\FileCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dfs2GeoJson.cs" />
+    <Compile Include="DfsGetSpeed.cs" />
+    <Compile Include="Json2String.cs" />
+    <Compile Include="RandomizeModelSetup.cs" />
+    <Compile Include="ResultFileStatistics.cs" />
+    <Compile Include="Unzip.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DHI.Services.ARRWebPortal\DHI.Services.ARRWebPortal.csproj">
+      <Project>{abb7145d-275b-41b1-be90-f16836a81600}</Project>
+      <Name>DHI.Services.ARRWebPortal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MIKECore.17.2.1\build\MIKECore.targets" Condition="Exists('..\packages\MIKECore.17.2.1\build\MIKECore.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MIKECore.17.2.1\build\MIKECore.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MIKECore.17.2.1\build\MIKECore.targets'))" />
+    <Error Condition="!Exists('..\packages\DHI.Workflow.Activities.6.1.2\build\DHI.Workflow.Activities.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\DHI.Workflow.Activities.6.1.2\build\DHI.Workflow.Activities.targets'))" />
+  </Target>
+  <Import Project="..\packages\DHI.Workflow.Activities.6.1.2\build\DHI.Workflow.Activities.targets" Condition="Exists('..\packages\DHI.Workflow.Activities.6.1.2\build\DHI.Workflow.Activities.targets')" />
+</Project>

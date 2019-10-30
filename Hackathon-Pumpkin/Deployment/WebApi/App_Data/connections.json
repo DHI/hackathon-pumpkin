@@ -1,0 +1,58 @@
+{
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[DHI.Services.IConnection, DHI.Services]], mscorlib",
+  "Registration": {
+    "$type": "DHI.Services.WebApi.RegistrationServiceConnection, DHI.Services.WebApi",
+    "AccountRepositoryConnectionString": "[AppData]mail_templates.json",
+    "AccountRepositoryType": "DHI.Services.Accounts.AccountRepository, DHI.Services",
+    "MailTemplateRepositoryConnectionString": "[AppData]mail_templates.json",
+    "MailTemplateRepositoryType": "DHI.Services.Mails.MailTemplateRepository, DHI.Services",
+    "SmtpHost": "smtpserv.dhi.dk",
+    "SmtpPort": 25,
+    "SmtpSetCredentials": false,
+    "TokenLifeTime": "1.00:00:00",
+    "Name": "User account registration service connection",
+    "Id": "Registration"
+  },
+  "MailTemplates": {
+    "$type": "DHI.Services.WebApi.MailTemplateServiceConnection, DHI.Services.WebApi",
+    "ConnectionString": "[AppData]mail_templates.json",
+    "RepositoryType": "DHI.Services.Mails.MailTemplateRepository, DHI.Services",
+    "Name": "Mail templates service connection",
+    "Id": "MailTemplates"
+  },
+  "json-logger": {
+    "$type": "DHI.Services.WebApi.LogServiceConnection, DHI.Services.WebApi",
+    "ConnectionString": "[AppData]log.json",
+    "LogReaderType": "DHI.Services.Logging.JsonLogger, DHI.Services",
+    "Name": "Log service connection",
+    "Id": "json-logger"
+  },
+  "Hosts": {
+    "$type": "DHI.Services.WebApi.GroupedHostServiceConnection, DHI.Services.WebApi",
+    "ConnectionString": "[AppData]grouped_hosts.json",
+    "RepositoryType": "DHI.Services.Jobs.GroupedHostRepository, DHI.Services.Jobs",
+    "Name": "Grouped hosts connection",
+    "Id": "Hosts"
+  },
+  "Dryp": {
+    "$type": "DHI.Services.TimeSeries.WebApi.DiscreteTimeSeriesServiceConnection, DHI.Services.TimeSeries.WebApi",
+    "ConnectionString": "baseUrl=https://backend.dryp.live;email=dhi@dryp.live;password=G3tdata!",
+    "RepositoryType": "DHI.Services.Provider.Dryp.TimeSeriesRepository, DHI.Services.Provider.Dryp",
+    "Name": "Dryp",
+    "Id": "Dryp"
+  },
+  "Dryp-GIS": {
+    "$type": "DHI.Services.GIS.WebApi.GisServiceConnection, DHI.Services.GIS.WebApi",
+    "ConnectionString": "baseUrl=https://backend.dryp.live;email=dhi@dryp.live;password=G3tdata!",
+    "RepositoryType": "DHI.Services.Provider.Dryp.GisRepository, DHI.Services.Provider.Dryp",
+    "Name": "Dryp-GIS",
+    "Id": "Dryp-GIS"
+  },
+  "ShapeFile": {
+    "$type": "DHI.Services.GIS.WebApi.GisServiceConnection, DHI.Services.GIS.WebApi",
+    "ConnectionString": "[AppData]/Data/",
+    "RepositoryType": "DHI.Services.Provider.ShapeFile.FeatureRepository, DHI.Services.Provider.ShapeFile",
+    "Name": "ShapeFile",
+    "Id": "ShapeFile"
+  }
+}

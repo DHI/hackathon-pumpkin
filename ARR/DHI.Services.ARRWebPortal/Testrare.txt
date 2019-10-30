@@ -1,0 +1,719 @@
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="english" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <link rel="Schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+        <meta name="DC.Publisher" content="corporateName=Bureau of Meteorology" />
+        <meta name="DC.Format" content="text/html" />
+        <meta name="DC.Coverage.jurisdiction" content="Commonwealth of Australia" />
+        <meta name="DC.Rights" scheme="URI" content="http://www.bom.gov.au/other/copyright.shtml" />
+        <meta name="DC.Language" scheme="RFC1766" content="en" />
+        <meta name="AGLS.Audience" scheme="BoM_audience list" content="All" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/css/core.css" />
+        <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/css/core-ie.css" /><![endif]-->
+        <!-- New Includes -->
+
+        <link rel="stylesheet" type="text/css" href="/water/css/water.css" />
+        <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/water/css/water-ie.css" /><![endif]-->
+        <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/water/css/water-ie8.css" /><![endif]-->
+
+        <script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="lib/papaparse.min.js"></script>
+        <script type="text/javascript" src="/libs/jquery/external/plugins/superfish/1.4.8/hoverIntent.js"></script>
+        <script type="text/javascript" src="/libs/jquery/external/plugins/superfish/1.4.8/superfish.js"></script>
+        <script type="text/javascript" src="/scripts/header-menus.js"></script>
+        <script type="text/javascript" src="/water/js/water.js"></script>
+        <script type="text/javascript" src="lib/jszip.min.js"></script>
+        <!-- End New Includes -->
+        <script type="text/javascript" src="/scripts/utilities.js"></script>
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <!--IFD-specific CSS and Javascript to follow-->
+        <script type="text/javascript" src="lib/jquery-ui-1.10.0.custom/js/jquery-ui-1.10.0.custom.min.js"></script>
+        <script type="text/javascript" src="js/ifd.js"></script>
+        <script type="text/javascript" src="js/fileDownload.js"></script>
+        <link href="css/ifd_layout.css" rel="stylesheet" type="text/css" />
+        <link href="css/ifd_toolbar.css" rel="stylesheet" type="text/css" />
+        <link href="css/ifd_tabs.css" rel="stylesheet" type="text/css" />
+        <link href="css/ifd_print.css" rel="stylesheet" type="text/css" media="print" />
+        <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ifd_layout_ie7.css" /><![endif]-->
+        <!--End IFD specific classes-->
+                <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.ie.css" />
+        <![endif]-->
+        <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+        <style type="text/css">
+            .leaflet-container,.leaflet-clickable{cursor:default;}
+        </style>
+            <title>Rainfall IFD Data System: Water Information: Bureau of Meteorology</title>
+        <link href="app/app.57c8821d68de156aff36.css" rel="stylesheet">
+  <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,r,O=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);O.src="javascript:void(0)",O.title="",O.role="presentation",(O.frameElement||O).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(O,r);try{o=O.contentWindow.document}catch(_){i=document.domain,O.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=O.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"6WJWU-82JGA-WH5QR-FV53R-5JQ89",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="ylp2k6qx2jiscxmaiqba-f-fa0e2ee2d-clientnsv4-s.akamaihd.net",i={"ak.v":23,"ak.cp":"491154","ak.ai":parseInt("320835",10),"ak.ol":"0","ak.cr":31,"ak.ipv":4,"ak.proto":"","ak.rid":"a3459bd","ak.r":30136,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"194.223.165.0","ak.cport":57461,"ak.gh":"23.47.73.146","ak.quicv":"","ak.tlsv":"UNKNOWN","ak.0rtt":"","ak.csrc":"-","ak.acc":"fast","ak.t":"1568687106"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script><script>bazadebezolkohpepadr="1825648918"</script><script type="text/javascript" src="http://www.bom.gov.au/akam/11/6cd1337c" defer></script></head>
+        <body>
+            <ul id="jumplinks">
+		<li><a href="#content">Skip to main content</a></li>
+	</ul>
+
+    <!-- Start: PageHeight -->
+    <div id="pageheight">
+	  <div id="pagewrap">
+      <!-- Start: Header -->
+      <div id="header">
+		<div class="l_content">
+			<div id="header-logo">
+				<img class="bannerprint" width="1" height="1" alt="Print Background" src="/images/ui/bannerprint.gif" />
+				<a id="logo" href="/?ref=logo"><img src="/images/ui/bom_logo_clr.gif" title="Australian Government - Bureau of Meteorology" alt="Australian Government - Bureau of Meteorology" /></a>
+			</div>
+			<div id="header-main">
+				<div class="l_top">
+					<div id="header-search">
+						<form action="//search.bom.gov.au/s/search.html" method="get" class="searchform" enctype="application/x-www-form-urlencoded">
+							<label for="query">Search</label><input type="text" id="query" name="query" size="30" placeholder="Enter search terms" value="" />
+							<input type="hidden" name="collection" value="bom" />
+							<input type="submit" value="Search" name="Submit" title="Search" class="search" />
+						</form>
+					</div>
+					<ul>
+						<li><a href="/?ref=hdr">Home</a></li>
+						<li><a href="/inside/index.shtml?ref=hdr">About</a></li>
+                                                <li><a href="//media.bom.gov.au/">Media</a></li>
+						<li class="last"><a href="/inside/contacts.shtml?ref=hdr">Contacts</a></li>
+					</ul>
+				</div>
+				<div class="l_bottom">
+					<ul class="sf-menu">
+						<li id="sf-menu-nsw">
+							<abbr title="New South Wales"><a href="/nsw/?ref=hdr" title="New South Wales">NSW</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/nsw-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/nsw/index.shtml?ref=hdr" title="New South Wales Weather and Warnings">NSW Weather &amp; Warnings</a></li>
+								<li><a href="/nsw/warnings/index.shtml?ref=hdr" title="New South Wales Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/nsw/forecasts/index.shtml?ref=hdr" title="New South Wales Forecasts">Forecasts</a></li>
+								<li><a href="/nsw/forecasts/sydney.shtml?ref=hdr" title="Sydney Forecast">Sydney Forecast</a></li>
+								<li><a href="/nsw/forecasts/map.shtml?ref=hdr" title="New South Wales Forecast Area Map">NSW Forecast Area Map</a></li>
+								<li><a href="/nsw/observations/index.shtml?ref=hdr" title="New South Wales Weather Observations">Observations</a></li>
+								<li><a href="/nsw/observations/sydney.shtml?ref=hdr" title="Latest Weather Observations for the Sydney Area">Sydney Observations</a></li>
+								<li><a href="/nsw/observations/nswall.shtml?ref=hdr" title="Latest Weather Observations for New South Wales">All NSW Observations</a></li>
+								<li class="last"><a href="/nsw/flood/index.shtml?ref=hdr" title="New South Wales Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-vic">
+							<abbr title="Victoria"><a href="/vic/?ref=hdr" title="Victoria">VIC</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/vic-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/vic/index.shtml?ref=hdr" title="Victorian Weather and Warnings">VIC Weather &amp; Warnings</a></li>
+								<li><a href="/vic/warnings/index.shtml?ref=hdr" title="Victorian Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/vic/forecasts/index.shtml?ref=hdr" title="Victorian Forecasts">Forecasts</a></li>
+								<li><a href="/vic/forecasts/melbourne.shtml?ref=hdr" title="Melbourne Forecast">Melbourne Forecast</a></li>
+								<li><a href="/vic/forecasts/map.shtml?ref=hdr" title="Victorian Forecast Areas Map">Vic. Forecast Areas Map</a></li>
+								<li><a href="/vic/observations/index.shtml?ref=hdr" title="Victorian Observations">Observations</a></li>
+								<li><a href="/vic/observations/melbourne.shtml?ref=hdr" title="Latest Weather Observations for the Melbourne Area">Melbourne Observations</a></li>
+								<li><a href="/vic/observations/vicall.shtml?ref=hdr" title="Latest Weather Observations for Victoria">All Victorian Observations</a></li>
+								<li class="last"><a href="/vic/flood/index.shtml?ref=hdr" title="Victoria Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-qld">
+							<abbr title="Queensland"><a href="/qld/?ref=hdr" title="Queensland">QLD</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/qld-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/qld/index.shtml?ref=hdr" title="Queensland Weather and Warnings">QLD Weather &amp; Warnings</a></li>
+								<li><a href="/qld/warnings/index.shtml?ref=hdr" title="Queensland Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/qld/forecasts/index.shtml?ref=hdr" title="Queensland Forecasts">Forecasts</a></li>
+								<li><a href="/qld/forecasts/brisbane.shtml?ref=hdr" title="Brisbane Forecast">Brisbane Forecast</a></li>
+								<li><a href="/qld/forecasts/map.shtml?ref=hdr" title="Queensland Forecast Areas Map">Qld. Forecast Areas Map</a></li>
+								<li><a href="/qld/observations/index.shtml?ref=hdr" title="Queensland Observations">Observations</a></li>
+								<li><a href="/qld/observations/brisbane.shtml?ref=hdr" title="Latest Weather Observations for the Brisbane Area">Brisbane Observations</a></li>
+								<li><a href="/qld/observations/qldall.shtml?ref=hdr" title="Latest Weather Observations for Queensland">All Queensland Observations</a></li>
+								<li class="last"><a href="/qld/flood/index.shtml?ref=hdr" title="Queensland Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-wa">
+							<abbr title="Western Australia"><a href="/wa/?ref=hdr" title="Western Australia">WA</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/wa-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/wa/index.shtml?ref=hdr" title="Western Australia Weather and Warnings">WA Weather &amp; Warnings</a></li>
+								<li><a href="/wa/warnings/index.shtml?ref=hdr" title="Western Australia Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/wa/forecasts/index.shtml?ref=hdr" title="Western Australia Forecasts">Forecasts</a></li>
+								<li><a href="/wa/forecasts/perth.shtml?ref=hdr" title="Perth Forecast">Perth Forecast</a></li>
+								<li><a href="/wa/forecasts/map.shtml?ref=hdr" title="Western Australian Forecast Areas Map">WA Forecast Areas Map</a></li>
+								<li><a href="/wa/observations/index.shtml?ref=hdr" title="Western Australia Observations">Observations</a></li>
+								<li><a href="/wa/observations/perth.shtml?ref=hdr" title="Latest Weather Observations for the Perth Area">Perth Observations</a></li>
+								<li><a href="/wa/observations/waall.shtml?ref=hdr" title="Latest Weather Observations for Western Australia">All WA Observations</a></li>
+								<li class="last"><a href="/wa/flood/index.shtml?ref=hdr" title="Western Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-sa">
+							<abbr title="South Australia"><a href="/sa/?ref=hdr" title="South Australia">SA</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/sa-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/sa/index.shtml?ref=hdr" title="South Australian Weather and Warnings">SA Weather &amp; Warnings</a></li>
+								<li><a href="/sa/warnings/index.shtml?ref=hdr" title="Warnings for South Australia">Warnings Summary</a></li>
+								<li><a href="/sa/forecasts/index.shtml?ref=hdr" title="South Australian Forecasts">Forecasts</a></li>
+								<li><a href="/sa/forecasts/adelaide.shtml?ref=hdr" title="Adelaide Forecast">Adelaide Forecast</a></li>
+								<li><a href="/sa/forecasts/map.shtml?ref=hdr" title="South Australia Forecast Area Map">SA Forecast Area Map</a></li>
+								<li><a href="/sa/observations/index.shtml?ref=hdr" title="South Australian Observations">Observations</a></li>
+								<li><a href="/sa/observations/adelaide.shtml?ref=hdr" title="Latest Weather Observations for the Adelaide Area">Adelaide Observations</a></li>
+								<li><a href="/sa/observations/saall.shtml?ref=hdr" title="Latest Weather Observations for South Australia">All SA Observations</a></li>
+								<li class="last"><a href="/sa/flood/index.shtml?ref=hdr" title="South Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-tas">
+							<abbr title="Tasmania"><a href="/tas/?ref=hdr" title="Tasmania">TAS</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/tas-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/tas/index.shtml?ref=hdr" title="Tasmanian Weather and Warnings">TAS Weather &amp; Warnings</a></li>
+								<li><a href="/tas/warnings/index.shtml?ref=hdr" title="Tasmanian Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/tas/forecasts/index.shtml?ref=hdr" title="Tasmanian Forecasts">Forecasts</a></li>
+								<li><a href="/tas/forecasts/hobart.shtml?ref=hdr" title="Hobart Forecast">Hobart Forecast</a></li>
+								<li><a href="/tas/forecasts/map.shtml?ref=hdr" title="Tasmanian Forecast Areas Map">Tas. Forecast Areas Map</a></li>
+								<li><a href="/tas/observations/index.shtml?ref=hdr" title="Tasmanian Observations">Observations</a></li>
+								<li><a href="/tas/observations/hobart.shtml?ref=hdr" title="Latest Weather Observations for the Hobart Area">Hobart Observations</a></li>
+								<li><a href="/tas/observations/tasall.shtml?ref=hdr" title="Latest Weather Observations for Tasmania">All Tasmanian Observations</a></li>
+								<li class="last"><a href="/tas/flood/index.shtml?ref=hdr" title="Tasmania Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-act">
+							<abbr title="Australian Capital Territory"><a href="/act/?ref=hdr" title="Australian Capital Territory">ACT</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/act-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/act/index.shtml?ref=hdr" title="Australian Capital Territory Weather and Warnings">ACT Weather &amp; Warnings</a></li>
+								<li><a href="/act/warnings/index.shtml?ref=hdr" title="Australian Capital Territory Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/act/forecasts/index.shtml?ref=hdr" title="Australian Capital Territory Forecasts">Forecasts</a></li>
+								<li><a href="/act/forecasts/canberra.shtml?ref=hdr" title="Canberra Forecast">Canberra Forecast</a></li>
+								<li><a href="/act/forecasts/act.shtml?ref=hdr" title="Australian Capital Territory Forecast">ACT Forecast</a></li>
+								<li><a href="/act/observations/index.shtml?ref=hdr" title="Australian Capital Territory Observations">Observations</a></li>
+								<li class="last"><a href="/act/observations/canberra.shtml?ref=hdr" title="Latest Weather Observations for the Canberra Area">Canberra Observations</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-nt">
+							<abbr title="Northern Territory"><a href="/nt/?ref=hdr" title="Northern Territory">NT</a></abbr>
+							<ul>
+								<li class="decoration"><img src="/images/weather/nt-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/nt/index.shtml?ref=hdr" title="Northern Territory Weather and Warnings">NT Weather &amp; Warnings</a></li>
+								<li><a href="/nt/warnings/index.shtml?ref=hdr" title="Northern Territory Warnings Summary">Warning Summary</a></li>
+								<li><a href="/nt/forecasts/index.shtml?ref=hdr" title="Northern Territory Forecasts">Forecasts</a></li>
+								<li><a href="/nt/forecasts/darwin.shtml?ref=hdr" title="Darwin Forecast">Darwin Forecast</a></li>
+								<li><a href="/nt/forecasts/map.shtml?ref=hdr" title="Northern Territory Forecast Area Map">NT Forecast Areas Map</a></li>
+								<li><a href="/nt/observations/index.shtml?ref=hdr" title="Northern Territory Weather Observations">Observations</a></li>
+								<li><a href="/nt/observations/darwin.shtml?ref=hdr" title="Latest Weather Observations for Darwin Area">Darwin Observations</a></li>
+								<li><a href="/nt/observations/ntall.shtml?ref=hdr" title="All NT Weather Observations">All NT Observations</a></li>
+								<li class="last"><a href="/nt/flood/index.shtml?ref=hdr" title="Northern Territory Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li id="sf-menu-aus" class="separator">
+							<a href="/australia/?ref=hdr" title="National Weather and Warnings">Australia</a>
+							<ul>
+								<li class="decoration"><img src="/images/weather/aus-thumb.png" alt="" /></li>
+								<li class="heading"><a href="/australia/index.shtml?ref=hdr" title="National Weather and Warnings">National Weather &amp; Warnings</a></li>
+								<li><a href="/australia/warnings/index.shtml?ref=hdr" title="National Warnings Summary">Warnings Summary</a></li>
+								<li><a href="/australia/majorcities.shtml?ref=hdr" title="Major Cities Forecast plus Outlook">Major Cities</a></li>
+								<li><a href="/australia/radar/index.shtml?ref=hdr" title="Radar Images">Radar Images</a></li>
+								<li><a href="/australia/charts/index.shtml?ref=hdr" title="Weather Maps">Weather Maps</a></li>
+								<li><a href="/australia/satellite/index.shtml?ref=hdr" title="Recent Satellite Images">Satellite Images</a></li>
+								<li class="last"><a href="/australia/flood/index.shtml?ref=hdr" title="Australia Rainfall and River Conditions">Rainfall &amp; River Conditions</a></li>
+							</ul>
+							<div class="sf-menu-pointer"></div>
+						</li>
+						<li class="no-menu"><a href="/global/?ref=hdr" title="Global Weather and Warnings">Global</a></li>
+						<li class="last no-menu"><a href="/ant/?ref=hdr" title="Antarctic and Southern Ocean Weather">Antarctica</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="l_shadow"></div>
+      </div>
+      <!-- End: Header -->
+
+      <!--
+
+<div id="site-announcement">
+
+<p>Insert message</p>
+
+</div>
+
+-->
+
+      <!-- Start: Columns -->
+      <div id="columns">
+            <!-- Start: Container -->
+                    <div id="main">
+                        <!-- Begin: Breadcrumb -->
+                        <p id="breadcrumb"><a href="/index.shtml">Bureau Home</a> &raquo; <a href="/water/index.shtml" class="current">Water Information</a> &raquo; <a href="/water/designRainfalls/">Design Rainfalls</a> &raquo; Design Rainfall Data System</p>
+                        <!-- End: Breadcrumb -->
+                        <div id="waterMenu">
+                            <ul id="local-nav" class="dropdown">
+    <li><a href="/water/index.shtml">Water Information</a>
+        <ul>
+            <li>Water data
+                <ul>
+                    <li><a href="/water/crews/introduction.shtml">Climate Resilient Water Sources</a></li>
+                    <li><a href="/water/designRainfalls/index.shtml">Design Rainfalls</a></li>
+                    <li><a href="/jsp/eiexplorer/">Environmental Monitoring Sites</a></li>
+                    <li><a href="/water/geofabric/index.shtml">Geofabric</a></li>
+                    <li><a href="/water/groundwater/index.shtml">Groundwater Information</a></li>
+                    <li><a href="/water/hrs/">Hydrologic Reference Stations</a></li>
+					<li><a href="/water/market/">Water Markets Information</a></li>
+                    <li><a href="/waterdata/">Water Data Online</a></li>
+                </ul>
+            </li>
+            <li>Water status
+                <ul>
+                    <li><a href="/water/waterassessments">Water Assessments</a></li>
+                    <li><a href="/water/landscape/">Landscape Water Balance</a></li>
+                    <li><a href="/water/nwa/2019">National Water Account</a></li>
+                    <li><a href="/water/npr/index.shtml" title="Annual report on the performance of urban water utilities">Urban National Performance Report</a></li>
+                    <li><a href="/water/urbanwater.shtml">Urban Water Information</a></li>
+                    <li><a href="/water/restrictions/index.php">Water Restrictions</a></li>
+                    <li><a href="/water/dashboards/#/water-storages/summary/state">Water Storage</a></li>
+                    <li><a href="/water/focus/">Water Focus Reports</a></li>
+                </ul>
+            </li>
+            <li>Water forecasts
+                <ul>
+                    <li><a href="/water/floods/index.shtml">Floods</a></li>
+                    <li><a href="/water/7daystreamflow">7-day Streamflow Forecasts</a></li>
+                    <li><a href="/water/ssf/index.shtml">Seasonal Streamflow Forecasts</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="/water/regulations/index.shtml">Regulations</a>
+        <ul>
+            <li><a href="/water/regulations/search.php">Find your organisation</a></li>
+            <li><a href="/water/regulations/aboutRegs.shtml">About the Regulations</a>
+                <ul>
+                    <li><a href="/water/regulations/background.shtml">Background</a></li>
+                    <li><a href="/water/regulations/principlesPolicies.shtml">Principles and Policies</a></li>
+                    <li><a href="/water/regulations/categoriesPersonAuxNav.shtml">Categories of Persons</a></li>
+                    <li><a href="/water/regulations/categoriesWaterAuxNav.shtml">Categories of Water Information</a></li>
+                    <li><a href="/water/regulations/subCategoriesWaterAuxNav.shtml">Subcategories of Water Information</a></li>
+                    <li><a href="/water/regulations/amendments/index.shtml">Amendments</a></li>
+                    <li><a href="/water/regulations/performanceFramewk.shtml">Regulator performance framework</a></li>
+                    <li><a href="/water/regulations/interagencyWorkingGroup.shtml">Interagency Working Group report</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/regulations/regsData.shtml">Regulations Data</a>
+                <ul>
+                    <li><a href="/water/regulations/dataFormat/index.shtml">Data Format Requirements</a></li>
+                    <li><a href="/water/regulations/dataDelivery/index.shtml">Data Delivery</a></li>
+                    <li><a href="/water/standards/datacollection/metadata.shtml">Metadata and Contextual Information</a></li>
+                    <li><a href="/water/regulations/dataLicensing/index.shtml">Data Licensing</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/regulations/schedules/index.shtml">Incorporated documents</a>
+                <ul>
+                    <li><a href="/water/regulations/schedules/sensitiveSites.shtml">Commercially Sensitive Sites</a></li>
+                    <li><a href="/water/regulations/schedules/metadata.shtml">Metadata and Contextual Information Requirements</a></li>
+                    <li><a href="/water/regulations/schedules/classesOfPerson.shtml">Persons and Classes of Persons</a></li>
+                    <li><a href="/water/regulations/schedules/urbanWater.shtml">Urban Water Management Information Requirements</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/regulations/fundingProgram/index.shtml">Funding program</a></li>
+        </ul>
+    </li>
+    <li><a href="/water/standards/index.shtml">Standards</a>
+        <ul>
+            <li><a href="/water/standards/wdtf/index.shtml">Water Data Transfer Format</a>
+                <ul>
+                    <li><a href="/water/standards/wdtf/aboutWDTF.shtml">About <abbr title="Water Data Transfer Format">WDTF</abbr></a></li>
+                    <li><a href="/water/standards/wdtf/wdtfDownload.shtml">Download <abbr title="Water Data Transfer Format">WDTF</abbr></a></li>
+                    <li><a href="/water/standards/wdtf/wdtfValidation.shtml"><abbr title="Water Data Transfer Format">WDTF</abbr> Validation</a></li>
+                    <li><a href="/water/standards/wdtf/wdtfTools.shtml"><abbr title="Water Data Transfer Format">WDTF</abbr> Tools</a></li>
+                    <li><a href="/water/standards/wdtf/wdtfFAQ.shtml"><abbr title="Water Data Transfer Format">WDTF</abbr> FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/standards/aboutStds.shtml">About Standards</a></li>
+            <li><a href="/water/standards/collaboration/index.shtml">Collaborative Approach</a>
+                <ul>
+                    <li><a href="/water/standards/niGuidelinesHyd.shtml">National Industry Guidelines for hydrometric monitoring</a></li>
+                    <li><a href="/water/standards/niGuidelineWQmetadata.shtml">National Industry Guideline for water quality metadata</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/standards/wasb/index.shtml">Water Accounting Standards</a>
+                <ul>
+                    <li><a href="/water/standards/wasb/awas.shtml">Australian Water Accounting Standards</a></li>
+                    <li><a href="/water/standards/wasb/resources.shtml">Resources</a></li>
+                    <li><a href="/water/standards/wasb/waterAccStory.shtml">Development</a></li>
+                    <li><a href="/water/standards/wasb/wasbFAQ.shtml">Frequently asked questions</a></li>
+                    <li><a href="/water/about/waterContacts/contactWASB.shtml">Contact us</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/standards/floodwarning.shtml">Flood Warning Standard</a></li>
+        </ul>
+    </li>
+    <li><a href="/water/news/index.php">News and events</a>
+        <ul>
+            <li><a href="/water/newEvents/presentations/index.shtml">Presentations</a>
+                <ul>
+                    <li><a href="/water/newEvents/presentations/ncwbriefings/index.shtml">National Climate and Water Briefings</a></li>
+                    <li><a href="/water/newEvents/presentations/waterbriefing2011/">National Water Information Briefings 2011</a></li>
+                    <li><a href="/water/newEvents/presentations/nwiSeminars2009.shtml">Water Information Industry Seminars 2009</a></li>
+                    <li><a href="/water/newEvents/presentations/nwiSeminars200708.shtml">Water Information Industry Seminars 2007-08</a></li>
+                    <li><a href="/water/newEvents/presentations/webinars/index.shtml">Webinars</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="/water/about/index.shtml">About</a>
+        <ul>
+            <li><a href="/water/about/waterRole/index.shtml">Water information role</a></li>
+            <li><a href="/water/about/waterContacts/index.shtml">Water contacts</a>
+                <ul>
+                    <!-- <li> <a href="/water/nwa/2010/nwa/feedback">National Water Account contacts</a></li> -->
+                    <li> <a href="/water/about/waterContacts/hydroContacts.shtml">Hydrometeorology contacts</a></li>
+                    <li> <a href="/water/about/waterContacts/wRegulationContacts.shtml">Water regulation contacts</a></li>
+                    <li><a href="/water/about/waterContacts/contactWASB.shtml">Water Accounting Standards Board contacts</a></li>
+                </ul>
+            </li>
+            <li><a href="/water/about/publications/index.shtml">Publications</a></li>
+            <li><a href="/water/about/video.shtml">Video</a></li>
+            <li><a href="/water/about/consultation/index.shtml">Consultation</a></li>
+            <li><a href="/water/about/wip/index.shtml">Work in progress</a></li>
+            <li><a href="/water/about/waterResearch/index.shtml">Water research</a>
+                <ul>
+                    <li><a href="/water/about/waterResearch/wirada.shtml">Water Information Research and Development Alliance</a></li>
+                    <li><a href="/water/about/waterResearch/arcproducts.shtml">Australian Research Council Linkage Projects</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+                        </div>
+                        <div id="waterWrapper" class="ifdPageWrapper">
+                            <div id="ifdHeader" class="ifdRoundedCorners ifdCheckboxSpace">
+                                <h1> Design Rainfall Data System (2016)</h1>
+                                <div class="ifdLinksAlign"> <a href="?content=help#conditions_caveats" target="IFDHelpWindow">Conditions of Use</a> &nbsp; | &nbsp; <a href="?content=help#help" target="IFDHelpWindow">Help</a> &nbsp; | &nbsp; <a href="mailto:IFDRevision@bom.gov.au">New IFD feedback</a>&nbsp; &nbsp;</div>                            </div>
+                        <div id="ifdGlobal" class="printHidden">
+                    </div>
+                    <noscript>
+                <div id="ifdGlobalNoScript">
+                    <div class="ifdErrorGlobal">
+                        <p class="ifdGlobalMsg">Javascript is disabled on your browser! Please enable it to take advantage of all the features on this website.
+                        </p>
+                    </div>
+                </div>
+            </noscript>
+                            <div id="ifdBoxWrapper" class="ifdRoundedCorners">
+                                <div id="ifdContentWrapper" class="ifdContentWrapper">
+                                            <div id="ifdSearch">
+        <div>
+           <h2 class="ifdSearchTitle">New Search</h2>
+           <div id="ifdSearchPanel">
+               <div class="formbox">
+    <input id="single" label="single point search" class="searchTypeSelctor" type="radio"  name="searchTypeSelctor"/>
+    <label for="single"><h2>Single Point</h2></label>
+     <form method="get" id="singleSearchForm" action="">
+        <div>
+                   <fieldset id="ddFieldset" class="ifdSearchGroup">
+            <input type="radio" id="ifdDdSearchRadio" class="ifdSearchRadio" name="coordinate_type" value="dd" checked="checked" /><label for="ifdDdSearchRadio" class="ifdSearchRadioLabel">Decimal degrees</label>            <div id="ifdDdSearch">
+                <fieldset class="ifdSearchInnerGroup fieldset-indent">
+                    <div class="ifdInputWrapper"><label id="ifdDdLatitudeInputLabel" class="ifdInputLabel" for="ifdDdLatitudeInput">Latitude:</label></div><input type="text" id="ifdDdLatitudeInput" class="ifdInputText" name="latitude" value="" maxlength="20" />                    <div class="ifdInputWrapper"><label id="ifdDdLongitudeInputLabel" class="ifdInputLabel" for="ifdDdLongitudeInput">Longitude:</label></div><input type="text" id="ifdDdLongitudeInput" class="ifdInputText" name="longitude" value="" maxlength="20" />                </fieldset>
+            </div>
+        </fieldset>
+                <hr class="ifdSearchHr" />
+                <fieldset id="dmsFieldset" class="ifdSearchGroup">
+            <input type="radio" id="ifdDmsSearchRadio" class="ifdSearchRadio" name="coordinate_type" value="dms"  /><label for="ifdDmsSearchRadio" class="ifdSearchRadioLabel">Degrees, Minutes, Seconds</label>            <div id="ifdDmsSearch">
+                <fieldset class="ifdSearchInnerGroup fieldset-indent">
+                            <fieldset>
+            <div class="ifdInputLabel">Latitude:</div>
+            <div class="ifdInputsDms">
+                <input type="text" id="ifdLatDegreesInput" class="ifdInputText" name="latdeg" value="" maxlength="4" size="3" style="width: 3em"/> <label id="ifdLatDegreesInputLabel" class="hidden ifdInputNotationLabel" for="ifdLatDegreesInput"><span class="hidden">Latitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png" /></label><div id="LatDegreesImage"></div> <input type="text" id="ifdLatMinutesInput" class="ifdInputText" name="latmin" value="" maxlength="2" size="2" style="width: 2em"/> <label id="ifdLatMinutesInputLabel" class="hidden ifdInputNotationLabel" for="ifdLatMinutesInput"><span class="hidden">Latitude Minutes</span><img alt="minute" class="minuteSuperScript" src="webimages/minute.png" /></label><div id="LatMinutesImage"></div> <input type="text" id="ifdLatSecondsInput" class="ifdInputText" name="latsec" value="" maxlength="2" size="2" style="width: 2em"/> <label id="ifdLatSecondsInputLabel" class="hidden ifdInputNotationLabel" for="ifdLatSecondsInput"><span class="hidden">Latitude Seconds</span><img alt="second" class="secondSuperScript" src="webimages/second.png" /></label><div id="LatSecondsImage"></div>             </div>
+        </fieldset>
+                                    <fieldset>
+            <div class="ifdInputLabel">Longitude:</div>
+            <div class="ifdInputsDms">
+                <input type="text" id="ifdLonDegreesInput" class="ifdInputText" name="londeg" value="" maxlength="4" size="3" style="width: 3em"/> <label id="ifdLonDegreesInputLabel" class="hidden ifdInputNotationLabel" for="ifdLonDegreesInput"><span class="hidden">Longitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png" /></label><div id="LonDegreesImage"></div> <input type="text" id="ifdLonMinutesInput" class="ifdInputText" name="lonmin" value="" maxlength="2" size="2" style="width: 2em"/> <label id="ifdLonMinutesInputLabel" class="hidden ifdInputNotationLabel" for="ifdLonMinutesInput"><span class="hidden">Longitude Minutes</span><img alt="minute" class="minuteSuperScript" src="webimages/minute.png" /></label><div id="LonMinutesImage"></div> <input type="text" id="ifdLonSecondsInput" class="ifdInputText" name="lonsec" value="" maxlength="2" size="2" style="width: 2em"/> <label id="ifdLonSecondsInputLabel" class="hidden ifdInputNotationLabel" for="ifdLonSecondsInput"><span class="hidden">Longitude Seconds</span><img alt="second" class="secondSuperScript" src="webimages/second.png" /></label><div id="LonSecondsImage"></div>             </div>
+        </fieldset>
+                        </fieldset>
+            </div>
+        </fieldset>
+                <hr class="ifdSearchHr" />
+                <fieldset id="enzFieldset" class="ifdSearchGroup">
+            <input type="radio" id="ifdEnzSearchRadio" class="ifdSearchRadio" name="coordinate_type" value="enz"  /><label for="ifdEnzSearchRadio" class="ifdSearchRadioLabel">Easting, Northing, Zone</label>            <div id="ifdEnzSearch">
+                <fieldset class="ifdSearchInnerGroup fieldset-indent">
+                    <div class="ifdInputWrapper"><label id="ifdEastingInputLabel" class="ifdInputLabel" for="ifdEastingInput">Easting:</label></div><input type="text" id="ifdEastingInput" class="ifdInputText" name="easting" value="" maxlength="20" />                    <div class="ifdInputWrapper"><label id="ifdNorthingInputLabel" class="ifdInputLabel" for="ifdNorthingInput">Northing:</label></div><input type="text" id="ifdNorthingInput" class="ifdInputText" name="northing" value="" maxlength="20" />                    <div class="ifdInputWrapper"><label id="ifdZoneInputLabel" class="ifdInputLabel" for="ifdZoneInput">Zone:</label></div><input type="text" id="ifdZoneInput" class="ifdInputText" name="zone" value="" maxlength="2" />                </fieldset>
+            </div>
+        </fieldset>
+                <hr class="ifdSearchHr" />
+                           <fieldset class="ifdUserLabelGroup">
+            <div id="ifdUserLabelSearch">
+                <label for="ifdUserLabel" class="ifdUserLabelLabel"><b>Label</b></label>
+                <a class="ifdTooltip" id="ifdUserLabelTooltip" title="Information and/or a name that can be added to the selected location.">Help</a><input id="ifdUserLabel" type="text" class="ifdUserLabelInputText" value="" name="user_label" maxlength="50" size="40"/>            </div>
+        </fieldset>
+                   <div class="ifdSearchButtonContainer">
+           <button type="submit" id="ifdSubmitButton" class="inputButtonStyle blue">Submit</button>
+         </div>
+        </div>
+     </form>
+  </div>
+                  <div class="formbox">
+    <input type="radio" label="multiple points" class="searchTypeSelctor" id="multi" name="searchTypeSelctor"/>
+    <label for="multi"><h2>Multiple Points</h2></label>
+     <form id="multiSearchForm" action="?multipoint" method="post">
+        <fieldset id="multiSearchRadio"style="margin:10px 10px 10px 10px;" onChange="validate()">
+          <p><strong>Upload CSV file</strong></p>
+          <ul id="multipointExample">
+  <li class="ddMultiSelector MultiSelector">
+    <span>Decimal Degrees</span> | <span class="downloadExamp" id="downloadExampleDD">Template</span>
+  </li>
+  <li class="dmsMultiSelector MultiSelector">
+    <span>Degrees, Minutes, Seconds</span> | <span class="downloadExamp" id="downloadExampleDMS">Template</span>
+  </li>
+  <li class="enzMultiSelector MultiSelector">
+  <span>Easting, Northing, Zone</span> | <span class="downloadExamp" id="downloadExampleENZ">Template</span>
+  </li>
+</ul>
+        </fieldset>
+         <fieldset style="margin:15px 10px 10px 10px;" >
+          <input  accept=".csv" type="file" label="Upload CSV" value="Upload CSV" class="submitFile" id="fileToUpload">
+          <div class="progressContainer">
+            <div id="progressFill"></div>
+          </div>
+        <div id="completed"></div>
+        <div id="errorMessage"></div>
+        </fieldset>
+        <div id="pointsAreaContainer">
+          <table id="pointsArea">
+            <thead id="pointsHead">
+
+            </thead>
+            <tbody id="pointsBody">
+
+            </tbody>
+          </table>
+        </div>
+        <hr class="ifdSearchHr">
+        <div class="ifdSearchButtonContainerMulti">
+        <button type="submit" label="Submit multiple points" id="ifdSubmitButtonMulti" class="inputButtonStyle blue">Submit</button>
+      </div>
+     </form>
+  </div>
+                  <div class="formbox">
+      <input label="search from extent"  id="extent" class="searchTypeSelctor" type="radio" name="searchTypeSelctor">
+      <label tabindex="1" for="extent"><h2>Extent</h2></label>
+      <form action="" id="ExtentForm" method="get">
+  <div>
+    <fieldset class="ifdSearchGroup" id="ddExtFieldset">
+      <input checked="checked" label="decimal degrees coordinates for extent" class="ifdSearchRadio ext" id="ifdDdSearchRadioExtent" name="coordinate_type" style="border-color: rgb(21, 101, 112);" type="radio" value="ddExt"><label class="ifdSearchRadioLabel" for="ifdDdSearchRadioExtent">Decimal degrees</label>
+      <div id="ifdDdSearch" >
+
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Lower-left</strong>
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdDdLatitudeInput" id="ifdDdLatitudeInputLabel">Latitude:</label>
+          </div><input class="ifdInputText" id="ifdDdLatitudeInput" maxlength="20" name="latitude1" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdDdLongitudeInput" id="ifdDdLongitudeInputLabel">Longitude:</label>
+          </div><input class="ifdInputText" id="ifdDdLongitudeInput" maxlength="20" name="longitude1" type="text" value="">
+        </fieldset>
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Upper-right</strong>
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdDdLatitudeInput" id="ifdDdLatitudeInputLabel">Latitude:</label>
+          </div><input class="ifdInputText" id="ifdDdLatitudeInput" maxlength="20" name="latitude2" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdDdLongitudeInput" id="ifdDdLongitudeInputLabel">Longitude:</label>
+          </div><input class="ifdInputText" id="ifdDdLongitudeInput" maxlength="20" name="longitude2" type="text" value="">
+        </fieldset>
+      </div>
+    </fieldset>
+    <hr class="ifdSearchHr">
+    <fieldset class="ifdSearchGroup" id="dmsExtFieldset">
+      <input class="ifdSearchRadio ext"  id="ifdDmsSearchRadioExtent" name="coordinate_type" style="border-color: rgb(21, 101, 112);" type="radio" value="dmsExt"><label class="ifdSearchRadioLabel" for="ifdDmsSearchRadioExtent">Degrees, Minutes, Seconds</label>
+      <div id="ifdDmsSearch">
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Lower-left</strong>
+          <fieldset>
+            <div class="ifdInputLabel">
+              Latitude:
+            </div>
+            <div class="ifdInputsDms">
+              <input class="ifdInputText" id="ifdLatDegreesInput" maxlength="4" name="latdeg1" size="3" style="width: 3em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatDegreesInput" id="ifdLatDegreesInputLabel"><span class="hidden">Latitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png"></label>
+              <div id="LatDegreesImage"></div><input class="ifdInputText" id="ifdLatMinutesInput" maxlength="2" name="latmin1" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatMinutesInput" id="ifdLatMinutesInputLabel"><span class="hidden">Latitude Minutes</span><img alt="minute" class="minuteSuperScript" src="webimages/minute.png"></label>
+              <div id="LatMinutesImage"></div><input class="ifdInputText" id="ifdLatSecondsInput" maxlength="2" name="latsec1" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatSecondsInput" id="ifdLatSecondsInputLabel"><span class="hidden">Latitude Seconds</span> <img alt="second" class="secondSuperScript" src="webimages/second.png"></label>
+              <div id="LatSecondsImage"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="ifdInputLabel">
+              Longitude:
+            </div>
+            <div class="ifdInputsDms">
+              <input class="ifdInputText" label="Degrees, minutes, seconds extent field" id="ifdLonDegreesInput" maxlength="4" name="londeg1" size="3" style="width: 3em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonDegreesInput" id="ifdLonDegreesInputLabel"><span class="hidden">Longitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png"></label>
+              <div id="LonDegreesImage"></div><input class="ifdInputText" id="ifdLonMinutesInput" maxlength="2" name="lonmin1" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonMinutesInput" id="ifdLonMinutesInputLabel"><span class="hidden">Longitude Minutes</span> <img alt="minute" class="minuteSuperScript" src="webimages/minute.png"></label>
+              <div id="LonMinutesImage"></div><input class="ifdInputText" id="ifdLonSecondsInput" maxlength="2" name="lonsec1" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonSecondsInput" id="ifdLonSecondsInputLabel"><span class="hidden">Longitude Seconds</span> <img alt="second" class="secondSuperScript" src="webimages/second.png"></label>
+              <div id="LonSecondsImage"></div>
+            </div>
+          </fieldset>
+        </fieldset>
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Upper-right</strong>
+          <fieldset>
+            <div class="ifdInputLabel">
+              Latitude:
+            </div>
+            <div class="ifdInputsDms">
+              <input class="ifdInputText" id="ifdLatDegreesInput" maxlength="4" name="latdeg2" size="3" style="width: 3em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatDegreesInput" id="ifdLatDegreesInputLabel"><span class="hidden">Latitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png"></label>
+              <div id="LatDegreesImage"></div><input class="ifdInputText" id="ifdLatMinutesInput" maxlength="2" name="latmin2" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatMinutesInput" id="ifdLatMinutesInputLabel"><span class="hidden">Latitude Minutes</span><img alt="minute" class="minuteSuperScript" src="webimages/minute.png"></label>
+              <div id="LatMinutesImage"></div><input class="ifdInputText" id="ifdLatSecondsInput" maxlength="2" name="latsec2" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLatSecondsInput" id="ifdLatSecondsInputLabel"><span class="hidden">Latitude Seconds</span> <img alt="second" class="secondSuperScript" src="webimages/second.png"></label>
+              <div id="LatSecondsImage"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="ifdInputLabel">
+              Longitude:
+            </div>
+            <div class="ifdInputsDms">
+              <input class="ifdInputText" id="ifdLonDegreesInput" maxlength="4" name="londeg2" size="3" style="width: 3em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonDegreesInput" id="ifdLonDegreesInputLabel"><span class="hidden">Longitude Degrees</span><img alt="degree" class="degreeSuperScript" src="webimages/degree.png"></label>
+              <div id="LonDegreesImage"></div><input class="ifdInputText" id="ifdLonMinutesInput" maxlength="2" name="lonmin2" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonMinutesInput" id="ifdLonMinutesInputLabel"><span class="hidden">Longitude Minutes</span> <img alt="minute" class="minuteSuperScript" src="webimages/minute.png"></label>
+              <div id="LonMinutesImage"></div><input class="ifdInputText" id="ifdLonSecondsInput" maxlength="2" name="lonsec2" size="2" style="width: 2em" type="text" value=""> <label class="hidden ifdInputNotationLabel" for="ifdLonSecondsInput" id="ifdLonSecondsInputLabel"><span class="hidden">Longitude Seconds</span> <img alt="second" class="secondSuperScript" src="webimages/second.png"></label>
+              <div id="LonSecondsImage"></div>
+            </div>
+          </fieldset>
+        </fieldset>
+      </div>
+    </fieldset>
+    <hr class="ifdSearchHr">
+    <fieldset class="ifdSearchGroup" id="enzExtFieldset">
+      <input class="ifdSearchRadio ext" label="Easting/Northing/Zone Extent Selection" id="ifdEnzSearchRadioExtent"  name="coordinate_type" style="border-color: rgb(21, 101, 112);" type="radio" value="enzExt"><label class="ifdSearchRadioLabel" for="ifdEnzSearchRadioExtent">Easting, Northing, Zone</label>
+      <div id="ifdEnzSearch">
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Lower-left</strong>
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdEastingInput" id="ifdEastingInputLabel">Easting:</label>
+          </div><input class="ifdInputText" id="ifdEastingInput" maxlength="20" name="easting1" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdNorthingInput" id="ifdNorthingInputLabel">Northing:</label>
+          </div><input class="ifdInputText" id="ifdNorthingInput" maxlength="20" name="northing1" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdZoneInput" id="ifdZoneInputLabel">Zone:</label>
+          </div><input class="ifdInputText" id="ifdZoneInput" maxlength="2" name="zone1" type="text" value="">
+        </fieldset>
+        <fieldset class="ifdSearchInnerGroup fieldset-indent">
+          <strong>Upper-right</strong>
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdEastingInput" id="ifdEastingInputLabel">Easting:</label>
+          </div><input class="ifdInputText" id="ifdEastingInput" maxlength="20" name="easting2" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdNorthingInput" id="ifdNorthingInputLabel">Northing:</label>
+          </div><input class="ifdInputText" id="ifdNorthingInput" maxlength="20" name="northing2" type="text" value="">
+          <div class="ifdInputWrapper">
+            <label class="ifdInputLabel" for="ifdZoneInput" id="ifdZoneInputLabel">Zone:</label>
+          </div><input class="ifdInputText" id="ifdZoneInput" maxlength="2" name="zone2" type="text" value="">
+        </fieldset>
+      </div>
+    </fieldset>
+    <hr class="ifdSearchHr">
+    <input name="sdmin" type="hidden" value="true"> <input name="sdhr" type="hidden" value="true"> <input name="sdday" type="hidden" value="true">
+    <fieldset class="ifdUserLabelGroup">
+      <!-- <div id="ifdUserLabelSearch">
+        <label class="ifdUserLabelLabel" for="ifdUserLabel"><b>Label</b></label> <a class="ifdTooltip" id="ifdUserLabelTooltip" title="Information and/or a name that can be added to the selected location.">Help</a><input class="ifdUserLabelInputText" id="ifdUserLabel" maxlength="50" name="user_label" size="40" type="text" value="">
+      </div> -->
+    </fieldset>
+    <input name="extent" type="hidden" value="true">
+    <div class="ifdSearchButtonContainer">
+      <button class="inputButtonStyle blue" id="ifdSubmitButton" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
+    </div>
+                  <a class="" id="mapIETooltip" title="The select from map feature is only available for chrome/firefox/microsoft edge">
+  <div id="mapSearchHeadingSelect" class="formbox">
+    <input type="radio" class="searchTypeSelctor" label="select from map" id="mapmulti" name="searchTypeSelctor"/>
+    <label for="mapmulti"><h2>Select from Map</h2></label>
+    <form id="mapSearchForm" >
+      <div id='ifdMapSearchOutput'></div>
+    </form>
+  </div>
+  </a>
+             </div>
+        </div>
+            <form id="ifdUpdateForm" method=get action=>
+                            <div>
+                <h2 class="ifdAnalysisTitle">Analysis - Single Point</h2>
+                <div id="ifdAnalysisPanel">
+                            <p class="ifdAnalysisLabel">Design Rainfalls</p>
+           <fieldset id="veryFrequentDesignFieldset">
+              <input id="veryFrequentDesignRadio" class="ifdDesignRadio" type="radio" value="very_frequent" name="design">
+              <label class="ifdDesignRadioLabel" for="veryFrequentDesignRadio">Very Frequent</label>
+           </fieldset>
+           <fieldset id="ifdDesignFieldset">
+              <input id="ifdsDesignRadio" class="ifdDesignRadio" type="radio" value="ifds" name="design">
+              <label class="ifdDesignRadioLabel" for="ifdsDesignRadio">IFDs (Frequent and Infrequent)</label>
+           </fieldset>
+           <fieldset id="rareDesignFieldset">
+              <input id="rareDesignRadio" class="ifdDesignRadio" type="radio" value="rare" name="design" checked="checked">
+              <label class="ifdDesignRadioLabel" for="rareDesignRadio">Rare</label>
+           </fieldset>
+        <p class="ifdAnalysisLabel">Standard Durations</p>
+        <fieldset class="ifdSearchInnerGroup">
+            <input type="checkbox" id="ifdSd30Min" class="ifdSdCheckbox" name="sdmin" value="true" />            <label class="ifdSdCheckboxLabel" for="ifdSd30Min">1 - 45 minutes</label>
+            <br/>
+            <input type="checkbox" id="ifdSd12hour:s" class="ifdSdCheckbox" name="sdhr" value="true" />            <label class="ifdSdCheckboxLabel" for="ifdSd12hour:s">1 - 18 hours</label>
+            <br/>
+            <input type="checkbox" id="ifdSd168hour:s" class="ifdSdCheckbox" name="sdday" value="true"  checked="checked"/>            <label class="ifdSdCheckboxLabel" for="ifdSd168hour:s">24 - 168 hours</label>
+        </fieldset>
+
+        <hr class="ifdSearchHr" />
+
+         <a tabindex="0" class="section-header collapsible ifdAnalysisLabel"  id="NSDLabel">Non-Standard Durations</a>
+        <fieldset id="ifdNsdGroup" class="ifdSearchInnerGroup">
+            <a class="ifdTooltip" id="ifdNsdInfoTooltip" title="Click + to include additional non-standard durations. For calculation of the design rainfalls, the entered non-standard duration may be rounded The rounded value will be displayed in the Design Rainfall table.">Help</a>        <fieldset class="ifdAddNsdFieldset">
+            <div class="ifdInputLabel ifdNsdLabelIndent">Duration:</div>            <div class="ifdInputsNsd">
+                <input type="text" label="Non-Standard-Duration Input" id="ifdNsdInput1" class="ifdNsdField ifdInputNsd ifdInputText " name="nsd[]" value="" maxlength="5" size="5" />        <select label="Minutes or hour selection for Non Standard Duration" class="ifdDropdownList" name="nsdunit[]">
+            <option value="m" selected='selected'>minutes</option><option value="h" >hours</option>        </select>
+                    <button type="button" id="ifdAddNsdButton1" class="ifdAddNsdButton" name="add" title="Add new duration">+</button>
+                            </div>
+        </fieldset>
+                </fieldset>
+
+        <hr class="ifdSearchHr" />
+
+        <a tabindex="0" class="section-header collapsible ifdAnalysisLabel" id="ObservedRainfallLabel">Observed Rainfalls</a>
+
+              <fieldset class="fullObs">
+        <fieldset class="ifdSearchInnerGroup" style="display:none;" title="">
+    <input type="checkbox" id="ifdSd30Min" checked="checked" class="ifdSdCheckbox" name="sdmin" value="true" checked="checked">            <label class="ifdSdCheckboxLabel" for="ifdSd30Min">1 - 30 minutes</label>
+    <br>
+    <input type="checkbox" checked="checked" id="ifdSd12hour:s" class="ifdSdCheckbox" name="sdhr" value="true" checked="checked">            <label class="ifdSdCheckboxLabel" for="ifdSd12hour:s">1 - 12 hours</label>
+    <br>
+    <input type="checkbox" checked="checked" id="ifdSd168hour:s" class="ifdSdCheckbox" name="sdday" value="true" checked="checked">            <label class="ifdSdCheckboxLabel" for="ifdSd168hour:s">24 - 168 hours</label>
+</fieldset>
+      <a class="ifdTooltip" id="ifdObsInfoTooltip" title="Enter maximum observed storm depth in millimeters for each duration of interest. Observed rainfalls are only available for standard durations.">Help</a><div class="ifdObsDataForm"><div style="display:inline-block;float:left;width:140px"><div style=""><fieldset id="inputField1" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">1 min:</div><input label="Observed data for 1 minutes" name="ObsData[1]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField2" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">2 min:</div><input label="Observed data for 2 minutes" name="ObsData[2]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField3" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">3 min:</div><input label="Observed data for 3 minutes" name="ObsData[3]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField4" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">4 min:</div><input label="Observed data for 4 minutes" name="ObsData[4]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField5" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">5 min:</div><input label="Observed data for 5 minutes" name="ObsData[5]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField10" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">10 min:</div><input label="Observed data for 10 minutes" name="ObsData[10]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField15" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">15 min:</div><input label="Observed data for 15 minutes" name="ObsData[15]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField20" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">20 min:</div><input label="Observed data for 20 minutes" name="ObsData[20]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField25" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">25 min:</div><input label="Observed data for 25 minutes" name="ObsData[25]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField30" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">30 min:</div><input label="Observed data for 30 minutes" name="ObsData[30]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField45" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">45 min:</div><input label="Observed data for 45 minutes" name="ObsData[45]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField60" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">1 hour:</div><input label="Observed data for 60 minutes" name="ObsData[60]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField90" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">1.5 hour:</div><input label="Observed data for 90 minutes" name="ObsData[90]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField120" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">2 hour:</div><input label="Observed data for 120 minutes" name="ObsData[120]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField180" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">3 hour:</div><input label="Observed data for 180 minutes" name="ObsData[180]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div></div><div style="display:inline-block;float:left;width:140px"><div style=""><fieldset id="inputField270" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">4.5 hour:</div><input label="Observed data for 270 minutes" name="ObsData[270]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField360" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">6 hour:</div><input label="Observed data for 360 minutes" name="ObsData[360]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField540" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">9 hour:</div><input label="Observed data for 540 minutes" name="ObsData[540]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField720" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">12 hour:</div><input label="Observed data for 720 minutes" name="ObsData[720]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField1080" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">18 hour:</div><input label="Observed data for 1080 minutes" name="ObsData[1080]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField1440" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">24 hour:</div><input label="Observed data for 1440 minutes" name="ObsData[1440]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField1800" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">30 hour:</div><input label="Observed data for 1800 minutes" name="ObsData[1800]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField2160" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">36 hour:</div><input label="Observed data for 2160 minutes" name="ObsData[2160]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField2880" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">48 hour:</div><input label="Observed data for 2880 minutes" name="ObsData[2880]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField4320" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">72 hour:</div><input label="Observed data for 4320 minutes" name="ObsData[4320]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField5760" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">96 hour:</div><input label="Observed data for 5760 minutes" name="ObsData[5760]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField7200" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">120 hour:</div><input label="Observed data for 7200 minutes" name="ObsData[7200]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField8640" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">144 hour:</div><input label="Observed data for 8640 minutes" name="ObsData[8640]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div><div style=""><fieldset id="inputField10080" class="ObsDataField"><div class="ifdInputLabel ifdNsdLabelIndent">168 hour:</div><input label="Observed data for 10080 minutes" name="ObsData[10080]" value="0" class="ifdInputText ifdObsFormFill" step=".01" min="0" type="number"/></fieldset></div></div></div>      <div style="clear:both;padding:5px">
+      <p><a target="_blank" href="./../#sec10q1">How do I estimate the probability of an observed rainfall event using the 2016 design rainfalls?</a></p>
+      </div></fieldset>
+      <input type="hidden" name="coordinate_type" value="dd"></input><input type="hidden" name="latitude" value="-27.722435918973442"></input><input type="hidden" name="longitude" value="153.33618164062503"></input><input type="hidden" name="user_label" value=""></input><input type="hidden" name="values" value="depths"></input>                    <hr class="ifdSearchHr" />
+                    <span class="ifdSearchButtonContainer">
+                        <button type="submit" id="ifdUpdateButton" class="inputButtonStyle blue" name="update" value="">Update</button>
+                        <button type="submit" id="ifdResetButton" class="inputButtonStyle blue" name="reset" value="">Reset</button>
+                    </span>
+                        <hr class="ifdSearchHr">
+                          <div>
+        <p class="ifdAnalysisLabel"><strong>Other Options</strong></p>
+        <fieldset>
+          <input type='checkbox' class="ifdSdCheckbox" id="coeffCheck"/><label class="ifdSdCheckboxLabel" for="coeffCheck">Coefficients</label><br />
+          <!--<input type='checkbox' class="ifdSdCheckbox" checked="checked" id="uncertCheck"/><label class="ifdSdCheckboxLabel" for="uncertCheck">Uncertainty</label><br />-->
+                    <input type='checkbox' class="ifdSdCheckbox" id="seasonCheck"/><label class="ifdSdCheckboxLabel" for="seasonCheck">Seasonality</label><br />
+                </fieldset>
+      </div>
+                      </div>
+            </div>
+                                        </form>
+        </div>
+                <div id="ifdContentDisplay">
+                    <div id="ifdToolbar">
+            <div class="ifdRightAlign">
+                <span class="ifdValuesDepths"><a class="ifdDownloadCsv csvDownloadIcon" href="?save=table&amp;url=rXs69X7tUOorr8sK0zFBpnRh4wngC%2BXCPewHgCs1rYgLMd8%2BRVDV9tQGP6Ns89qinlSciX9pfzKxgxZZVe%2Fl0K2dlNclaqe4gE1Ni2I1LGqHp3QJ9WEWok29rxBRbAB5VrkbDMLNo3cENg%2BXf0y8qjz9B3tlX47Wkxc8FS4RLbv3jHbUDaxnTQBgH2a0blJ3" title="Download as CSV">Download as CSV</a>

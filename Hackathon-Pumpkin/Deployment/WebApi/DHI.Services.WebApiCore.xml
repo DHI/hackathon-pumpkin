@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHI.Services.WebApiCore</name>
+    </assembly>
+    <members>
+        <member name="T:DHI.Services.WebApiCore.AccountRepository">
+            <summary>
+                JSON file-based AccountRepository that is located in the App_Data folder.
+            </summary>
+            <seealso cref="T:DHI.Services.Accounts.AccountRepository" />
+        </member>
+        <member name="M:DHI.Services.WebApiCore.AccountRepository.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApiCore.AccountRepository" /> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.AuthenticationController">
+            <summary>
+                Authentication API.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.AuthenticationController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApiCore.AuthenticationController" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.AuthenticationController.CreateToken(DHI.Services.WebApiCore.ValidationDTO)">
+            <summary>
+                Creates a JWT authorization token.
+            </summary>
+            <param name="validationDTO">The validation dto.</param>
+            <response code="400">Illegal password or account not activated.</response>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.AuthenticationController.Validate(DHI.Services.WebApiCore.ValidationDTO)">
+            <summary>
+                Performs an account validation.
+            </summary>
+            <remarks>
+                Checks whether the account exists, the password is correct and the account is activated.
+            </remarks>
+            <param name="validationDTO">The validation body.</param>
+            <response code="400">Illegal password or account not activated</response>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.ConnectionRepository">
+            <summary>
+                JSON file-based ConnectionRepository that is located in the App_Data folder.
+            </summary>
+            <seealso cref="T:DHI.Services.ConnectionRepository" />
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionRepository.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApiCore.ConnectionRepository" /> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.Add(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+                Adds a new connection.
+            </summary>
+            <remarks>
+                The connection representation must define the connection type using the $type property.
+            </remarks>
+            <response code="201">Created</response>
+            <param name="jToken">The json body</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.Update(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+                Updates an existing connection.
+            </summary>
+            <remarks>
+                The connection representation must define the connection type using the $type property.
+            </remarks>
+            <response code="404">Connection not found</response>
+            <param name="jToken">The json body</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.Delete(System.String)">
+            <summary>
+                Deletes the connection with the specified identifier.
+            </summary>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Connection not found</response>
+            <param name="id">The connection ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.Get(System.String)">
+            <summary>
+                Gets a connection with the specified identifier.
+            </summary>
+            <response code="404">Connection not found</response>
+            <param name="id">The connection ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetAll">
+            <summary>
+                Gets a list of all connections.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetIds">
+            <summary>
+                Gets a list of all connection ids.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetAllTypes">
+            <summary>
+                Gets a list of all connection types.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetCount">
+            <summary>
+                Gets the total number of connections.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetType(System.String)">
+            <summary>
+                Gets the connection type with the given identifier.
+            </summary>
+            <response code="404">Connection type not found</response>
+            <param name="typeId">The connection type ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.GetTypeIds">
+            <summary>
+                Gets a list of connection type IDs.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.VerifyExisting(System.String)">
+            <summary>
+                Existing connection verification.
+            </summary>
+            <remarks>
+                Verifies that an existing connection with the given ID is valid – i.e. that the connection can be established.
+            </remarks>
+            <response code="422">Unprocessable. Verification failed</response>
+            <response code="404">Connection not found</response>
+            <param name="id">The connection ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionsController.VerifyNew(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+                New connection verification
+            </summary>
+            <remarks>
+                Verifies that a new connection is valid – i.e. that the connection can be established. The connection
+                representation must define the connection type using the $type property.
+            </remarks>
+            <response code="200">OK</response>
+            <response code="422">Unprocessable. Verification failed</response>
+            <param name="jToken">The json body.</param>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.ConnectionTypeService">
+            <summary>
+            Class ConnectionTypeService. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.ConnectionTypeService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.WebApiCore.ConnectionTypeService"/> class.
+            </summary>
+            <param name="path">A path to look for connection types.</param>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.QueryConditionDTO">
+            <summary>
+                Data transfer object for a query condition resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.QueryConditionDTO.Item">
+            <summary>
+                Gets or sets the item.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.QueryConditionDTO.QueryOperator">
+            <summary>
+                Gets or sets the query operator.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.QueryConditionDTO.Value">
+            <summary>
+                Gets or sets the value.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.QueryConditionDTO.ToQueryCondition">
+            <summary>
+                Converts the DTO to a QueryCondition object.
+            </summary>
+            <returns>QueryCondition.</returns>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.QueryDTO`1">
+            <summary>
+                Data transfer object for a query resource representation.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApiCore.QueryDTO`1.ToQuery">
+            <summary>
+                Converts the DTO to a Query object.
+            </summary>
+            <returns>Query&lt;T&gt;.</returns>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.ServiceId">
+            <summary>
+                System service ID definitions.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.ConnectionTypes">
+            <summary>
+                ID of the ConnectionTypeService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.Accounts">
+            <summary>
+                ID of the AccountService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.Registration">
+            <summary>
+                ID of the RegistrationService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.Authentication">
+            <summary>
+                ID of the AuthenticationService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.Hosts">
+            <summary>
+                ID of the HostService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.MailTemplates">
+            <summary>
+                ID of the MailTemplateService.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ServiceId.MapStyles">
+            <summary>
+                ID of the MapStyleService.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.TokenDTO">
+            <summary>
+                Data transfer object for a JWT token resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.TokenDTO.Token">
+            <summary>
+                Gets or sets the JWT token.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.TokenDTO.Expiration">
+            <summary>
+                Gets or sets the expiration time.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApiCore.ValidationDTO">
+            <summary>
+                Data transfer object for an account validation resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ValidationDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApiCore.ValidationDTO.Password">
+            <summary>
+                Gets or sets the password.
+            </summary>
+        </member>
+    </members>
+</doc>

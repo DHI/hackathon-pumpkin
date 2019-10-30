@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHI.Services.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DHI.Services.WebApi.AccountServiceConnection">
+            <summary>
+                AccountServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.Accounts.AccountServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.AccountServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.AccountServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.AccountServiceConnection.Create">
+            <summary>
+                Creates an AccountService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.GroupedHostServiceConnection">
+            <summary>
+                GroupedHostServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.Jobs.GroupedHostServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.GroupedHostServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.GroupedHostServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.GroupedHostServiceConnection.Create">
+            <summary>
+                Creates an HostService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.HostServiceConnection">
+            <summary>
+                HostServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.Jobs.HostServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.HostServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.HostServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.HostServiceConnection.Create">
+            <summary>
+                Creates an HostService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.LogServiceConnection">
+            <summary>
+                LogServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+            <seealso cref="T:DHI.Services.Logging.LogServiceConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.LogServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.LogServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.LogServiceConnection.Create">
+            <summary>
+                Creates a LogService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.MailTemplateServiceConnection">
+            <summary>
+                MailTemplateServiceConnection.
+            </summary>
+            <seealso cref="T:DHI.Services.BaseConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.MailTemplateServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.MailTemplateServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:DHI.Services.WebApi.MailTemplateServiceConnection.ConnectionString">
+            <summary>
+                Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.MailTemplateServiceConnection.RepositoryType">
+            <summary>
+                Gets or sets the type of the repository.
+            </summary>
+            <value>The type of the repository.</value>
+        </member>
+        <member name="M:DHI.Services.WebApi.MailTemplateServiceConnection.CreateConnectionType``1(System.String)">
+            <summary>
+                Creates a ConnectionType object.
+            </summary>
+            <typeparam name="TConnection">The type of the connection.</typeparam>
+            <param name="path">A path to search for compatible repository types.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.MailTemplateServiceConnection.Create">
+            <summary>
+                Creates a MailTemplateService instance.
+            </summary>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:DHI.Services.WebApi.RegistrationServiceConnection">
+            <summary>
+            RegistrationServiceConnection.
+            </summary>
+            <seealso cref="T:DHI.Services.BaseConnection" />
+        </member>
+        <member name="M:DHI.Services.WebApi.RegistrationServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.WebApi.RegistrationServiceConnection"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.AccountRepositoryConnectionString">
+            <summary>
+            Gets or sets the account repository connection string.
+            </summary>
+            <value>The account repository connection string.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.AccountRepositoryType">
+            <summary>
+            Gets or sets the type of the account repository.
+            </summary>
+            <value>The type of the account repository.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.MailTemplateRepositoryConnectionString">
+            <summary>
+            Gets or sets the mail template repository connection string.
+            </summary>
+            <value>The mail template repository connection string.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.MailTemplateRepositoryType">
+            <summary>
+            Gets or sets the type of the mail template repository.
+            </summary>
+            <value>The type of the mail template repository.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.SmtpHost">
+            <summary>
+            Gets or sets the SMTP host.
+            </summary>
+            <value>The SMTP host.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.SmtpPort">
+            <summary>
+            Gets or sets the SMTP port.
+            </summary>
+            <value>The SMTP port.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.SmtpSetCredentials">
+            <summary>
+            Gets or sets a value indicating whether SMTP credentials shall be used.
+            </summary>
+            <value><c>true</c> if SMTP credentials shall be used; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.SmtpUsername">
+            <summary>
+            Gets or sets the SMTP username.
+            </summary>
+            <value>The SMTP username.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.SmtpPassword">
+            <summary>
+            Gets or sets the SMTP password.
+            </summary>
+            <value>The SMTP password.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.RegistrationServiceConnection.TokenLifeTime">
+            <summary>
+            Gets or sets the token life time.
+            </summary>
+            <value>The token life time.</value>
+        </member>
+        <member name="M:DHI.Services.WebApi.RegistrationServiceConnection.CreateConnectionType``1(System.String)">
+            <summary>
+            Creates a ConnectionType object.
+            </summary>
+            <typeparam name="TConnection">The type of the connection.</typeparam>
+            <param name="path">A path to search for compatible repository types.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.RegistrationServiceConnection.Create">
+            <summary>
+            Creates a RegistrationService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.Controllers.AccountsController">
+            <summary>
+                Accounts API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Activate(System.String)">
+            <summary>
+                Activates an account using the specified activation token.
+            </summary>
+            <remarks>
+                The necessary activation token must be obtained from e.g. an email or a mobile text message.
+            </remarks>
+            <response code="400">Incorrect or invalidated activation token</response>
+            <param name="token">The activation token.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Add(DHI.Services.WebApi.DTOs.AccountDTO)">
+            <summary>
+                Adds a new account.
+            </summary>
+            <remarks>
+                Adding a new account automatically activates the account.
+            </remarks>
+            <param name="accountDTO">Account body.</param>
+            <response code="201">Created</response>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Update(DHI.Services.WebApi.DTOs.AccountUpdateDTO)">
+            <summary>
+                Updates an existing account.
+            </summary>
+            <remarks>
+                The password can be omitted from an update, but all other properties must be present. Otherwise, they will be set
+                to null.
+            </remarks>
+            <response code="404">Account not found</response>
+            <param name="accountUpdateDTO">Updated account body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Delete(System.String)">
+            <summary>
+                Deletes the account with the specified identifier.
+            </summary>
+            <param name="id">The account ID.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Account not found</response>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Get(System.String)">
+            <summary>
+                Gets an account with the specified identifier.
+            </summary>
+            <param name="id">The account ID.</param>
+            <response code="404">Account not found</response>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.GetAll">
+            <summary>
+                Gets a list of all accounts.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.GetCount">
+            <summary>
+                Gets the total number of accounts.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.Register(DHI.Services.WebApi.DTOs.RegistrationDTO)">
+            <summary>
+                Performs an account registration.
+            </summary>
+            <remarks>
+                An account registration must be followed by an account activation before the account is activated and valid. A
+                one-time activation token is generated and an activation link with the generated reset token is sent to the user
+                account in an email.
+            </remarks>
+            <response code="202">Account registration accepted</response>
+            <param name="registrationDTO">The registration body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.UpdateMe(DHI.Services.WebApi.DTOs.MeDTO)">
+            <summary>
+                Modifies the account of the calling user.
+            </summary>
+            <remarks>
+                A user can modify his own Password as well as the Email, PhoneNumber and Company properties. If any of these
+                properties
+                are ommitted in the body, they will be set to null. Other account properties cannot be modified.
+            </remarks>
+            <response code="403">Forbidden. This endpoint is only to update calling users own account</response>
+            <param name="meDTO">Me body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.ResetPassword(System.String)">
+            <summary>
+                Generates a one-time token that allows for a password reset.
+            </summary>
+            <remarks>
+                Generates a one-time token that allows for a password reset for the account identified by the given email address
+                or account ID. A password reset link with the generated reset token is sent to the user account in an email.
+            </remarks>
+            <param name="id">The email address or account ID.</param>
+            <response code="202">Password reset accepted</response>
+            <response code="404">Account not found</response>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.AccountsController.UpdatePassword(System.String,System.String)">
+            <summary>
+                Updates the password for the user account associated with the given token.
+            </summary>
+            <remarks>
+                The necessary password reset token must be obtained from e.g. an email or a mobile text message.
+            </remarks>
+            <param name="token">The token.</param>
+            <param name="password">The password.</param>
+            <response code="400">Incorrect or invalidated token</response>
+        </member>
+        <member name="T:DHI.Services.WebApi.Controllers.JobHostsController">
+            <summary>
+                Job Hosts API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.Get(System.String)">
+            <summary>
+                Gets the job host with the specified identifier.
+            </summary>
+            <response code="200">OK</response>
+            <response code="404">Job host not found</response>
+            <param name="id">The job host ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.GetList(System.String)">
+            <summary>
+                Gets a list of job hosts.
+            </summary>
+            <remarks>
+                If no group is given, a list of all job hosts is retrieved.
+                If a group is given, a list of job hosts within the given group is retrieved. This is only applicable if the connection type is grouped.
+            </remarks>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.GetCount">
+            <summary>
+                Gets the total number of job hosts.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.GetFullNames(System.String)">
+            <summary>
+                Gets a list of job host full-name identifiers.
+            </summary>
+            <remarks>
+                NOTE: Only applicable if the connection type is grouped (hierarchical).
+                If a group is given, a list of time series full-name identifiers within the given group (recursive) is retrieved.
+            </remarks>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.GetIds">
+            <summary>
+                Gets a list of all job host IDs.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.Add(DHI.Services.WebApi.DTOs.HostDTO)">
+            <summary>
+                Adds a new job host.
+            </summary>
+            <response code="201">Created</response>
+            <param name="hostDto">The job host body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.Update(DHI.Services.WebApi.DTOs.HostDTO)">
+            <summary>
+                Updates an existing job host.
+            </summary>
+            <response code="200">OK</response>
+            <response code="404">Job host not found</response>
+            <param name="hostDto">The job host body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.JobHostsController.Delete(System.String)">
+            <summary>
+                Deletes the job host with the specified identifier.
+            </summary>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Job host not found</response>
+            <param name="id">The job host ID.</param>
+        </member>
+        <member name="T:DHI.Services.WebApi.Controllers.LogsController">
+            <summary>
+                Logs API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.LogsController.GetByQuery(System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Services.Logging.LogEntry})">
+            <summary>
+                Gets a list of log entries by query.
+            </summary>
+            <param name="connectionId">The connection ID.</param>
+            <param name="queryDTO">The query body</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.LogsController.GetByQueryString(System.String)">
+            <summary>
+                Gets a list of log entries by query string.
+            </summary>
+            <param name="connectionId">The connection ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.LogsController.Last(System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Services.Logging.LogEntry})">
+            <summary>
+                Gets the last log entry fullfilling the given query.
+            </summary>
+            <param name="connectionId">The connection ID.</param>
+            <param name="queryDTO">The query body</param>
+        </member>
+        <member name="T:DHI.Services.WebApi.Controllers.MailTemplatesController">
+            <summary>
+                Mail Templates API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.Get(System.String)">
+            <summary>
+                Gets the email template with the specified identifier.
+            </summary>
+            <response code="404">Email template not found</response>
+            <param name="id">The email template ID.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.GetAll">
+            <summary>
+                Gets a list of all email templates.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.GetCount">
+            <summary>
+                Gets the total number of email templates.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.GetIds">
+            <summary>
+                Gets a list of email template IDs.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.Add(DHI.Services.WebApi.DTOs.MailTemplateDTO)">
+            <summary>
+                Adds a new email template
+            </summary>
+            <response code="201">Created</response>
+            <param name="mailTemplateDTO">The email template body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.Update(DHI.Services.WebApi.DTOs.MailTemplateDTO)">
+            <summary>
+                Updates an existing email template.
+            </summary>
+            <response code="404">Email template not found</response>
+            <param name="mailTemplateDTO">The email template body.</param>
+        </member>
+        <member name="M:DHI.Services.WebApi.Controllers.MailTemplatesController.Delete(System.String)">
+            <summary>
+                Deletes the email template with the specified identifier.
+            </summary>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Email template not found</response>
+            <param name="id">The email template ID.</param>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.AccountDTO">
+            <summary>
+                Data transfer object for account resource representation.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.AccountDTO.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.DTOs.AccountDTO" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountDTO.Id">
+            <summary>
+                Gets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountDTO.Name">
+            <summary>
+                Gets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountDTO.Password">
+            <summary>
+                Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountDTO.Roles">
+            <summary>
+                Gets or sets the roles.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.AccountDTO.ToAccount">
+            <summary>
+                Converts the DTO to an Account object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.AccountUpdateDTO">
+            <summary>
+                Data transfer object for account update resource representation.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.AccountUpdateDTO.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.DTOs.AccountUpdateDTO" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountUpdateDTO.Id">
+            <summary>
+                Gets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.AccountUpdateDTO.Password">
+            <summary>
+                Gets or sets the password.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.AccountUpdateDTO.ToAccount">
+            <summary>
+                Converts the DTO to an Account object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.HostDTO">
+            <summary>
+                Data transfer object for job host resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.Name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.Group">
+            <summary>
+                Gets or sets the group.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.Priority">
+            <summary>
+                Gets or sets the priority.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.RunningJobsLimit">
+            <summary>
+                Gets or sets the running jobs limit.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.CloudInstanceHandlerType">
+            <summary>
+                Gets or sets the type of the cloud instance handler.
+            </summary>
+            <value>The type of the cloud instance handler.</value>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.HostDTO.CloudInstanceParameters">
+            <summary>
+                Gets or sets the cloud instance parameters.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.HostDTO.ToHost">
+            <summary>
+                Converts the DTO to a Host object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.MailTemplateDTO">
+            <summary>
+                Data transfer object for mail template resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.Name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.Subject">
+            <summary>
+                Gets or sets the subject.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.Body">
+            <summary>
+                Gets or sets the body.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.From">
+            <summary>
+                Gets or sets from.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MailTemplateDTO.FromDisplayName">
+            <summary>
+                Gets or sets from display name.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.MailTemplateDTO.ToMailTemplate">
+            <summary>
+                Converts the DTO to a MailTemplate object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.MeDTO">
+            <summary>
+                Data transfer object for a personal (me) account resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.Company">
+            <summary>
+                Gets or sets the company.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.PhoneNumber">
+            <summary>
+                Gets or sets the phone number.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.Email">
+            <summary>
+                Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.Password">
+            <summary>
+                Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.MeDTO.Metadata">
+            <summary>
+                Gets or sets the metadata.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.MeDTO.ToAccount">
+            <summary>
+                Converts the DTO to an Account object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.DTOs.RegistrationDTO">
+            <summary>
+                Data transfer object for a account registration resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.RegistrationDTO.Company">
+            <summary>
+                Gets or sets the company.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.RegistrationDTO.Email">
+            <summary>
+                Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.RegistrationDTO.Id">
+            <summary>
+                Gets or sets the identifier.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.RegistrationDTO.Name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.WebApi.DTOs.RegistrationDTO.Password">
+            <summary>
+                Gets or sets the password.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.WebApi.DTOs.RegistrationDTO.ToAccount">
+            <summary>
+                Converts the DTO to an Account object.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.WebApi.HostRepository">
+            <summary>
+                JSON file-based HostRepository that is located in the App_Data folder.
+            </summary>
+            <seealso cref="T:DHI.Services.Jobs.HostRepository" />
+        </member>
+        <member name="M:DHI.Services.WebApi.HostRepository.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.WebApi.HostRepository" /> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+    </members>
+</doc>

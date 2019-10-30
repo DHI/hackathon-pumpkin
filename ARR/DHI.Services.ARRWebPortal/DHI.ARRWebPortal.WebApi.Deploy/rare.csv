@@ -1,0 +1,17 @@
+Copyright Commonwealth of Australia 2016 Bureau of Meteorology (ABN 92 637 533 532)
+
+Rare Design Rainfall Depth (mm)
+Issued:,22 March 2017
+Location
+Requested coordinate:,Latitude,-30.0,Longitude,150.0
+Nearest grid cell:,Latitude,29.9875(S),Longitude,150.0125(E)
+
+,,Annual Exceedance Probability (1 in x)
+Duration,Duration in min,1 in 100,1 in 200,1 in 500,1 in 1000,1 in 2000
+24 hour,1440,165,188,218,243,269
+48 hour,2880,212,240,279,311,345
+72 hour,4320,242,275,321,359,399
+96 hour,5760,260,296,347,389,434
+120 hour,7200,270,307,361,406,454
+144 hour,8640,275,313,367,414,463
+168 hour,10080,275,313,367,415,464

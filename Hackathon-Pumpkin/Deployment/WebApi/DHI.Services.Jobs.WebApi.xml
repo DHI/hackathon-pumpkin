@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DHI.Services.Jobs.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DHI.Services.Jobs.WebApi.JobDTO">
+            <summary>
+                Data transfer object for a job resource representation.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.Jobs.WebApi.JobDTO.Parameters">
+            <summary>
+                Gets the parameters.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.Jobs.WebApi.JobDTO.Tag">
+            <summary>
+                Gets or sets the tag.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.Jobs.WebApi.JobDTO.HostGroup">
+            <summary>
+                Gets or sets the host group.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.Jobs.WebApi.JobDTO.Priority">
+            <summary>
+                Gets or sets the priority.
+            </summary>
+        </member>
+        <member name="P:DHI.Services.Jobs.WebApi.JobDTO.TaskId">
+            <summary>
+                Gets or sets the task identifier.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.JobRepository">
+            <summary>
+                JSON file-based JobRepository that is located in the App_Data folder.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobRepository.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.Jobs.WebApi.JobRepository"/> class.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.JobsController">
+            <summary>
+                Jobs API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.Delete(System.String,System.Guid)">
+            <summary>
+                Deletes the job with the specified identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="204">No Content. Successfully deleted</response>
+            <response code="404">Job not found</response>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.Delete(System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+                Deletes all the jobs meeting the criteria specified by the given parameters.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="account">The account.</param>
+            <param name="before">The before datetime.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.Get(System.String,System.Guid)">
+            <summary>
+                Gets the job with the specified identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The job identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Job not found</response>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.GetLast(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Gets the last job meeting the criteria specified by the given parameters.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="account">The account.</param>
+            <param name="status">The status.</param>
+            <param name="task">The task.</param>
+            <param name="tag">The tag.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.GetByQueryString(System.String,System.String,System.Nullable{System.DateTime},System.String,System.String,System.String)">
+            <summary>
+                Gets all the jobs meeting the criteria specified by the given query string parameters.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="account">The account.</param>
+            <param name="since">The since datetime.</param>
+            <param name="status">The status.</param>
+            <param name="task">The task.</param>
+            <param name="tag">The tag.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.GetByQuery(System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Services.Jobs.Job{System.Guid,System.String}})">
+            <summary>
+                 Gets all the jobs meeting the criteria specified by the given query.
+            </summary>
+            <param name="connectionId">The connection ID.</param>
+            <param name="queryDTO">The query body</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.GetCount(System.String)">
+            <summary>
+                Gets the total number of jobs.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.Execute(System.String,DHI.Services.Jobs.WebApi.JobDTO)">
+            <summary>
+                Requests a job execution.
+            </summary>
+            <remarks>
+                A job is a task "instance" – i.e. an execution of a task or a task that has been executed.
+            </remarks>
+            <remarks>
+                If the specified task requires input parameters, these must be specified. The response includes a Location header
+                with a URL to the created job resource. This link can be used to retrieve the status of the job. A job can be
+                marked with a given tag by including a Tag property in the request. However, this is optional.
+            </remarks>
+            <remarks>
+                The unique identifier of a job is a GUID (e.g. 7299875c-ee1f-4f20-bb30-066cc267f1bd).
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="jobDTO">The job dto.</param>
+            <response code="201">Pending job Created</response>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.CancelMultiple(System.String,System.Guid[])">
+            <summary>
+                Requests cancellation of the jobs with the specified job identifiers.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="ids">The job identifiers.</param>
+            <response code="202">Job cancellation requests successfully created</response>
+            <response code="404">Job not found</response>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobsController.Cancel(System.String,System.Guid)">
+            <summary>
+                Requests cancellation of the job with the specified job identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The job identifier.</param>
+            <response code="202">Job cancellation requests successfully created</response>
+            <response code="404">Job not found</response>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.JobServiceConnection">
+            <summary>
+                JobServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DHI.Services.Jobs.WebApi.JobServiceConnection"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.JobServiceConnection.Create">
+            <summary>
+                Creates a JobService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.ScenariosController">
+            <summary>
+                Scenarios API.
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.GetWithinTimeInterval(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+                Gets all scenarios within the given time span
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="from">From datetime</param>
+            <param name="to">To datetime</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.GetByQuery(System.String,DHI.Services.WebApiCore.QueryDTO{DHI.Services.Jobs.Scenarios.Scenario})">
+            <summary>
+                Gets a list of scenarios by query.
+            </summary>
+            <param name="connectionId">The connection ID.</param>
+            <param name="queryDTO">The query body</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.Get(System.String,System.String)">
+            <summary>
+                Gets a scenario with the specified identifier
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The scenario identifier</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.Add(System.String,DHI.Services.Jobs.WebApi.ScenarioDTO)">
+            <summary>
+                Adds a scenario
+            </summary>
+            <param name="connectionId">The connection identifier</param>
+            <param name="scenarioDTO">The scenario body</param>
+            <returns></returns>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.Update(System.String,DHI.Services.Jobs.WebApi.ScenarioDTO)">
+            <summary>
+                Updates an existing scenario.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="scenarioDTO">The scenario body</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenariosController.Delete(System.String,System.String)">
+            <summary>
+                Deletes the scenario with the specified identifier.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The scenario identifier.</param>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.ScenarioServiceConnection">
+            <summary>
+                ScenarioServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenarioServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.Jobs.WebApi.ScenarioServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.ScenarioServiceConnection.Create">
+            <summary>
+                Creates an ScenarioService instance.
+            </summary>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.TasksController">
+            <summary>
+                Tasks API
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TasksController.Get(System.String,System.String)">
+            <summary>
+                Gets the task with the specified identifier.
+            </summary>
+            <remarks>
+                A task is a unit of work that can be executed as a job. Some tasks take input parameters.
+            </remarks>
+            <param name="connectionId">The connection identifier.</param>
+            <param name="id">The identifier.</param>
+            <response code="200">OK</response>
+            <response code="404">Task not found</response>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TasksController.GetIds(System.String)">
+            <summary>
+                Gets a list of all task IDs.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TasksController.GetAll(System.String)">
+            <summary>
+                Gets a list of all tasks.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TasksController.GetCount(System.String)">
+            <summary>
+                Gets the total number of tasks.
+            </summary>
+            <param name="connectionId">The connection identifier.</param>
+        </member>
+        <member name="T:DHI.Services.Jobs.WebApi.TaskServiceConnection">
+            <summary>
+                TaskServiceConnection supporting connection string resolvation of [AppData].
+            </summary>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TaskServiceConnection.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:DHI.Services.Jobs.WebApi.TaskServiceConnection" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DHI.Services.Jobs.WebApi.TaskServiceConnection.Create">
+            <summary>
+                Creates a TaskService instance.
+            </summary>
+        </member>
+    </members>
+</doc>
